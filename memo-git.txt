@@ -9,3 +9,6 @@ git add nomDuFichier
 
 Commiter
 git commit
+
+Pousser
+git push
