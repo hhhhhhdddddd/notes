@@ -1,0 +1,11 @@
+Cloner un dépôt existant
+git clone [url]
+
+Vérifier l'état du dépôt local
+git status
+
+Ajouter au prochain commit
+git add nomDuFichier
+
+Commiter
+git commit
