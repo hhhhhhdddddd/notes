@@ -1,3 +1,5 @@
+Byte. Nombre de bits nécessaire pour représenter un caractère (souvent 8 bits). PoC 129.
+
 Constante numérique. Une constante numérique a pour valeur le nombre qu'elle représente et pour type le type de ce nombre.
 
 Overflow (débordement, dépassement). Des bits se retrouvent au delà de la partie qui leur est réservée (ils sont emportés par le "flow"). Par exemple, les bits de la valeur débordent dans la partie réservé au bit de signe lors d'un overflow d'une opération sur des entiers signés.
