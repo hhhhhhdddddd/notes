@@ -6,6 +6,6 @@ Effet de bord. Effet permenant causé par l'évaluation d'une expression. [PoC 3
 
 Overflow (débordement, dépassement). Des bits se retrouvent au delà de la partie qui leur est réservée (ils sont emportés par le "flow"). Par exemple, les bits de la valeur débordent dans la partie réservé au bit de signe lors d'un overflow d'une opération sur des entiers signés.
 
-Représentation des nombres. Pour une explication rapide cf. Le Maître p.17.
+Représentation des nombres. Pour une explication rapide [Le Maître p.17]
 
 Troncature (lors de la division d'entier en C). La direction de la troncature est dépendante de la machine en C. -4/3 (i.e. -1.33...) peut valoir -1 ou -2.
