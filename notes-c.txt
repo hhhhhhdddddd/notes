@@ -1,4 +1,4 @@
-Byte. Nombre de bits nécessaire pour représenter un caractère (souvent 8 bits). PoC 129.
+Byte. Nombre de bits nécessaire pour représenter un caractère (souvent 8 bits) [PoC p.129]
 
 Constante numérique. Une constante numérique a pour valeur le nombre qu'elle représente et pour type le type de ce nombre.
 
