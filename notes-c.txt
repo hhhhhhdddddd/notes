@@ -1,0 +1,5 @@
+Unix/C. Programmer en C c'est en fait programmer en Unix/C. Unix est l'environnement de programmation de C (à l'image de Smalltalk).
+
+En C on s'occupe des variables et de leur référence alors que dans les langage de plus haut niveau on ne s'occupe que des références (Java, Lisp, etc.) On doit ici encore faire le boulot de la machine ou du compilateur.
+
+C fait confiance au programmeur tout comme les langages typés dynamiquement.
