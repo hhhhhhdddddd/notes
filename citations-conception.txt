@@ -1,0 +1,4 @@
+"Above all else, clarity. Don't be afraid to violate any general principle for the sake of clarity." -- Jeffrey Esakov and Tom Weiss, Data Structures an advanced approach using C, p. 48.
+
+"Unfortunately, as a society we tend to regard 'complex' and 'intelligent' as words that go together. In actuality, intelligent solutions are often the simplest ones." -- Kyle Loudon, Mastering Algorithms with C, p. 9.
+
