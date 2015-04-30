@@ -1,0 +1,24 @@
+----------------------------
+Encodage caractères DOS/Unix
+----------------------------
+
+http://jeremy.zawodny.com/blog/archives/008872.html#comment-35750
+
+* Funny story - I once worked with a really good set of operations people at a small (100 people) company. Operations had firm procedures about not deploying code that they didn't receive from QA. Anyway late night comes, dev wants to get something trivial out the door, they'd made a minor edit to a config file, nothing could break, client needs this asap, etc. QA is not available for reasons I can't recall. VP of Engineering says, "Deploy it." Operations says, "Not unless it comes from QA or someone above both of us (CEO)."
+
+VP, pissed, gets the CEO on the phone, "Operations is holding us up. We need this done now. It's just a config file. Nothing can break. Client needs it."
+
+CEO to operations, "Deploy."
+
+Operations, "OK."
+
+Crash.
+
+That cluster goes bye-bye. Nothing works. Application servers won't come up. Weird error messages referring to files that weren't changed.
+
+Dev sends a replacement, "exactly" the same as the file that had been working earlier in the day. Same thing. App servers won't come up. Weird errors. Cluster down beyond service level agreements. Client doesn't get _any_ hits. Hours go by before operations finds the problem cr characters.
+
+Turns out the config file had been edited on Windows and instead of being checked into version control had been sent through the mail. Checking into version control and checking out would have converted from DOS to Unix formats. The file ran for dev because they were using servers on Windows.
+
+By not going through procedures dev had changed not only the one line that they knew about, but every line in the file.
+
