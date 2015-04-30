@@ -1,0 +1,12 @@
+Ne pas obliger à partir à la chasse.
+Ne pas mélanger spécifique et générique.
+Produire des modules (objet, etc.) autonome et générique.
+
+---
+
+# Produire des modules (objet, etc.) autonome
+
+Que les modules ne fassent pas de supposition sur les autres modules, qu'ils se contentent d'utiliser l'interface qui leur est proposée.
+
+Que les modules soient autonomes dès l'initialisation.
+
