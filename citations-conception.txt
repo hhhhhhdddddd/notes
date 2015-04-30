@@ -1,9 +1,92 @@
+NDA Lire "The elements of programming style", Kernighan et Plauger.
+
+----------
+Pseudocode
+----------
+
+Write first in an easy-to-understand pseudo-language; then translate into whatever language you have to use.
+-- Brian Kernighan, "The Elements of Programming Style", 2nd edition, 1978, p. 42.
+
+---------------------
+Structures de données
+---------------------
+
+Choose a data representation that makes the program simple.
+-- Brian Kernighan, "The Elements of Programming Style", 2nd edition, 1978, p. .
+
+Let the data structure the program.
+-- Brian Kernighan, "The Elements of Programming Style", 2nd edition, 1978, p. .
+
+------
+Clarté
+------
+
 Above all else, clarity. Don't be afraid to violate any general principle for the sake of clarity. 
--- Jeffrey Esakov and Tom Weiss, "Data Structures an advanced approach using C", p. 48.
+-- Jeffrey Esakov and Tom Weiss, "Data Structures an advanced approach using C", 1989, p. 48.
+
+Writing a Program is Writing.
+-- Allen Holub, "The C Companion", 1987, p. 104.
+
+-------
+Nommage
+-------
+
+Whatever naming conventions are adopted, they should encourage programmers to use long, informative, and consistent names.
+-- Frakes et al., "Software engineering in the Unix/C environment", 1991, p. 49.
+
+----------
+Réécriture
+----------
+
+Don't comment bad code -- rewrite it.
+-- Brian Kernighan, "The Elements of Programming Style", 2nd edition, 1978, p. 144.
+
+Don't strain to re-use code; reorganize instead
+-- Brian Kernighan, "The Elements of Programming Style", 2nd edition, 1978, p. 129.
+
+----------
+Simplicité
+----------
 
 Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it? 
--- Brian Kernighan, "The Elements of Programming Style", 2nd edition, p. 10.
+-- Brian Kernighan, "The Elements of Programming Style", 2nd edition, 1978, p. 10.
 
 Unfortunately, as a society we tend to regard 'complex' and 'intelligent' as words that go together. In actuality, intelligent solutions are often the simplest ones. 
 -- Kyle Loudon, "Mastering Algorithms with C", p. 9.
 
+------------
+Bibliothèque
+------------
+
+Use library functions.
+-- Brian Kernighan, "The Elements of Programming Style", 2nd edition, 1978, p. 10.
+
+Whenever possible, existing functions should be used to solve part of the problem, provided that the function perform the job well.
+-- Jeffrey Esakov and Tom Weiss, "Data Structures an advanced approach using C", 1989, p. 48.
+
+-------
+Langage
+-------
+
+Use the good features of a language; avoid the bad ones.
+-- Brian Kernighan, "The Elements of Programming Style", 2nd edition, 1978, p. 19.
+
+----------
+Généricité
+----------
+
+Make sure special cases are truly special.
+-- Brian Kernighan, "The Elements of Programming Style", 1978, 2nd edition, p. .
+
+Write generic/polymorphic functions.
+-- Jeffrey Esakov and Tom Weiss, "Data Structures an advanced approach using C", 1989, p. 49.
+
+Data structures used to represent polymorphic data types can make no assumptionsabout the data being stored [...] this means that all type-specific information must be passed as parameters to the primitive operators. Often these parameters will include pointers to type-specific functions.
+-- Jeffrey Esakov and Tom Weiss, "Data Structures an advanced approach using C", 1989, p. 44.
+
+------------------------
+Dévelopement incrémental
+------------------------
+
+Even if your intention is to produce an advanced program, there is a point in starting with a simple version.
+-- Ake, Wikstrom, "Functional Programming Using Standard ML", 1987, p. 340.
