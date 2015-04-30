@@ -1,0 +1,19 @@
+Installer Mit-scheme
+  sudo apt-get install mit-scheme
+
+Couper l'écran en deux horizontalement
+  C-x 2
+
+Lancer un interpréteur scheme dans l'une des fenêtre
+  M-x run-scheme  // "s>" indiquera les commandes tapée dans l'interpréteur
+
+Ouvrir un fichier *.ss (emacs passe en mode scheme)
+  C-x C-f unFichier.ss
+
+Charger le fichier dans scheme
+  C-x o  // passe dans la fenêtre de l'interpréteur
+  s> (load "unFichier.ss")  // charge le fichier dans l'interpréteur
+
+Rééxécuter une commande précédemment tapée dans l'interpréteur scheme
+  Aller à la fin de la ligne de la commande
+  ENTREE

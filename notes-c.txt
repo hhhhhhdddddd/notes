@@ -1,5 +1,17 @@
-Unix/C. Programmer en C c'est en fait programmer en Unix/C. Unix est l'environnement de programmation de C (à l'image de Smalltalk).
+Unix/C. Programmer en C c'est en fait programmer en Unix/C. Unix est l'environnement de programmation de C (à "l'image" de Smalltalk, no pun intended).
 
-En C on s'occupe des variables et de leur référence alors que dans les langage de plus haut niveau on ne s'occupe que des références (Java, Lisp, etc.) On doit ici encore faire le boulot de la machine ou du compilateur.
+Variables et référence. En C on s'occupe des variables et de leur référence (pointeur) alors que dans les langage de plus haut niveau on ne s'occupe que des références (Java, Lisp, etc.) On doit ici encore faire le boulot de la machine ou du compilateur.
 
-C fait confiance au programmeur tout comme les langages typés dynamiquement.
+C comme confiance. C fait confiance au programmeur tout comme les langages typés dynamiquement.
+
+Tableau multidimensionnel. On peut avoir des tableau de tous types, en particulier des tableau de tableau. Tout ce que veut le compilateur c'est connaître la largeur d'une case, d'où int a[/*rien*/][42].
+
+Un identificateur perdu dans le déclarateur suivant le type.
+
+Déclare le type de la valeur du résultat de l'évaluation de l'identificateur qui suit (qui peut être enfoui dans le déclarateur suivant le type.)
+
+typedef. On fait comme si on déclarait une variable sauf que le nom est celui du type qu'on souhaite introduire.
+
+Raison de passer un pointeurs à une fonction.
+- variable trop grosse, on veut s'épargner la copie
+- on veut modifier la variable

@@ -1,0 +1,187 @@
+------
+Divers
+------
+Quitter emacs
+  C-x C-c
+
+Quitter info
+  q
+
+Quitter la commande en cours d'exécution    
+  C-g
+
+Kill un buffer
+  C-x k
+
+-------
+Edition
+-------
+Sauvegarder
+  C-x C-s  // Sauvegarde le fichier courant
+  C-x C-w  // "Enregister sous"
+
+Choisir un buffer: dans le minibuffer
+  C-x b    // Demande un nom dans le minibuffer
+  FLECHES  // Fait défiler la liste des buffer ouvert dans le minibuffer
+  ENTREE   // Sélectionne le buffer
+
+Choisir un buffer: dans une fenêtre contenant la liste des buffers ouverts
+  C-x b    // Demande un nom dans le minibuffer
+  TAB      // Ouvre une vue avec les buffer disponible (*)
+  PAGE UP  // Place le curseur dans la fenêtre ouverte
+  FLECHES  // Fait passer d'un nom de buffer à l'autre
+  ENTREE   // Sélectionne le buffer
+
+Supprimer une ligne
+  C-a  // Aller au début de la ligne
+  C-k  // Kill la ligne à partir du point jusqu'à la fin de ligne
+
+Supprimer les espaces
+  M-\
+
+Supprimer le mot suivant
+  M-d
+
+Se déplacer (arrière <=> avant)
+  caractère:  C-b <=> C-f (ou <left>   <=> <right>)
+  mot:        M-b <=> M-f (ou C-<left> <=> C-right)
+  ligne:      C-p <=> C-n
+  dans ligne  C-a <=> C-e
+  écran       C-v <=> M-v
+  dans écran  M-r
+  dans buffer M-< <=> M->
+
+Sélectionner et couper-coller la sélection
+  M-@  // Pose une marque
+  ...  // Se déplacer jusqu'à l'endroit souhaité
+  C-w  // Kill la sélection
+  ...  // Se rendre où on veut coller
+  C-y  // Yank le dernier kill
+
+Tout sélectionner
+  C-x h
+
+Auto complétion rudimentaire
+  M-\
+
+Supprimer le caractère après le point
+  C-d
+
+Supprimer le mot après le point
+  M-d
+
+Rechercher desCaractères
+  C-s desCaractères  // Recherche en avant
+  C-r desCaractères  // Recherche en arrière
+
+Remplacer desCaractères par autresCaractères à partir du curseur
+  M-% desCaractères
+  ENTREE
+  autresCaractères
+  ENTREE
+  y ou n ou !  // y: remplacer, n: ne pas remplacer, !: tout remplacer
+
+Aller à la ligne numLigne
+  M-g g numLigne
+
+-------
+Fenêtre
+-------
+
+Scinder l'écran horizontalement
+  C-x 2
+  
+Scinder l'écran verticalement
+  C-x 3
+  
+Passer d'une vue à l'autre
+  C-x o
+  
+Supprime les autres vues
+  C-x 1
+
+Fermer la fenêtre courante
+  C-x 0
+----------
+Navigation
+----------
+Faire défiler l'écran
+  Pas de méthode simple
+
+-----
+Dired
+-----
+Créer un répertoire
+  +
+
+----
+Aide
+----
+
+Accéder à l'aide d'un mode majeur
+
+---------
+Aide Info
+---------
+Accéder au répertoire "emacs" dans le répertoire info (usr/share/info)
+  C-h i
+
+Passer au lien suivant
+  TAB
+
+Passer au lien précédent
+  M-TAB
+
+Ouvrir un lien
+  ENTREE
+
+Remonter d'un niveau
+  u
+
+-------------
+Programmation
+-------------
+Créer un fichier Makefile
+  CC=gcc
+  CFLAGS=-g -Wall -Wstrict-prototypes
+
+Compiler avec Makefile
+  M-x compile
+  ENTREE
+
+Compiler sans Makefile
+  M-x compile 
+  ...          // Taper la commande de compilation
+  ENTREE
+
+Se déplacer de fonction en fonction
+  C-M-a  // Avancer
+  C-M-e  // Reculer
+
+Commenter une sélection
+  ...      // Sélectionner une region
+  C-c C-c  // Commente la région sélectionnée
+
+--------
+Débogage
+--------
+M-x gdb
+  Lancer gdb
+
+C-x `
+  Aller à la ligne correspondant à l'erreur de compilation suivante
+
+------
+Divers
+------
+Ouvrir le terminal dans emacs
+  M-x terminal (NB. M-x shell est un terminal "diminué")
+
+Copier depuis la clipboard
+  clic-droit dans le terminal puis coller
+
+Installer emacs sans GUI
+  > apt-get install emacsXX-nox 
+
+Lancer emacs dans le terminal (en cas d'installation avec GUI)
+  > emacs -nw

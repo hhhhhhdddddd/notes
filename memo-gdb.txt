@@ -1,0 +1,53 @@
+quit
+  Quitte gdb
+
+run unExecutable
+  lance le débogage de l'exécutable unExecutable
+
+run < desDonnees
+  Passe desDonnes en argument du programme en cours de débogage
+
+set args < desDonnees
+  Fixe "< desDonnees" comme argument du programme à déboguer 
+
+run
+  Relance le programme
+
+where
+  Affiche la pile d'appels après un plantage
+
+up
+  Remonte dans la pile d'appel
+
+print uneVariable
+  Affiche la valeur de la variable uneVariable
+
+display uneVariable
+  Affiche la valeur de la variable uneVariable à chaque pause
+
+set variable uneVariable = uneValeur
+  Affecte uneValeur à uneVariable
+
+break numLigne
+  Pose un point d'arrêt à la ligne numLigne du source
+
+break uneFonction
+  Pose un point d'arrêt à l'entrée de la fonction uneFonction
+
+delete numLigne
+  Supprime le point d'arrête de la ligne numLigne du source
+
+continue
+  Continue l'exécution après une pause à un point d'arrêt
+
+next
+  Passe à l'instruction suivante
+
+step
+  S'introduit dans la fonction
+
+help
+  Affiche l'aide
+
+
+

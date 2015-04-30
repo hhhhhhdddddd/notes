@@ -1,14 +1,15 @@
 Cloner un dépôt existant
-git clone [url]
+  git clone [url]
 
 Vérifier l'état du dépôt local
-git status
+  git status
 
 Ajouter au prochain commit
-git add nomDuFichier
+  git add nomDuFichier
 
 Commiter
-git commit
+  git commit
 
 Pousser
-git push
+  git push
+

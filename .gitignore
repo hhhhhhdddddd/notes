@@ -1,0 +1,4 @@
+# Les lignes commençant par "#" sont des commentaires.
+
+#Ignore les sauvegardes emacs
+*~
