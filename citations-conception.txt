@@ -1,0 +1,9 @@
+Above all else, clarity. Don't be afraid to violate any general principle for the sake of clarity. 
+-- Jeffrey Esakov and Tom Weiss, "Data Structures an advanced approach using C", p. 48.
+
+Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it? 
+-- Brian Kernighan, "The Elements of Programming Style", 2nd edition, p. 10.
+
+Unfortunately, as a society we tend to regard 'complex' and 'intelligent' as words that go together. In actuality, intelligent solutions are often the simplest ones. 
+-- Kyle Loudon, "Mastering Algorithms with C", p. 9.
+
