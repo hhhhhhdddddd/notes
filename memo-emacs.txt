@@ -1,13 +1,14 @@
 ------
 Divers
 ------
+
 Quitter emacs
   C-x C-c
 
 Quitter info
   q
 
-Quitter la commande en cours d'exÃ©cution    
+Quitter la commande en cours d'exécution    
   C-g
 
 Kill un buffer
@@ -16,25 +17,26 @@ Kill un buffer
 -------
 Edition
 -------
+
 Sauvegarder
   C-x C-s  // Sauvegarde le fichier courant
   C-x C-w  // "Enregister sous"
 
 Choisir un buffer: dans le minibuffer
   C-x b    // Demande un nom dans le minibuffer
-  FLECHES  // Fait dÃ©filer la liste des buffer ouvert dans le minibuffer
-  ENTREE   // SÃ©lectionne le buffer
+  FLECHES  // Fait défiler la liste des buffer ouvert dans le minibuffer
+  ENTREE   // Sélectionne le buffer
 
-Choisir un buffer: dans une fenÃªtre contenant la liste des buffers ouverts
+Choisir un buffer: dans une fenêtre contenant la liste des buffers ouverts
   C-x b    // Demande un nom dans le minibuffer
   TAB      // Ouvre une vue avec les buffer disponible (*)
-  PAGE UP  // Place le curseur dans la fenÃªtre ouverte
-  FLECHES  // Fait passer d'un nom de buffer Ã  l'autre
-  ENTREE   // SÃ©lectionne le buffer
+  PAGE UP  // Place le curseur dans la fenêtre ouverte
+  FLECHES  // Fait passer d'un nom de buffer à l'autre
+  ENTREE   // Sélectionne le buffer
 
 Supprimer une ligne
-  C-a  // Aller au dÃ©but de la ligne
-  C-k  // Kill la ligne Ã  partir du point jusqu'Ã  la fin de ligne
+  C-a  // Aller au début de la ligne
+  C-k  // Kill la ligne à partir du point jusqu'à la fin de ligne
 
 Supprimer les espaces
   M-\
@@ -42,94 +44,106 @@ Supprimer les espaces
 Supprimer le mot suivant
   M-d
 
-Se dÃ©placer (arriÃ¨re <=> avant)
-  caractÃ¨re:  C-b <=> C-f (ou <left>   <=> <right>)
+Se déplacer (arrière <=> avant)
+  caractère:  C-b <=> C-f (ou <left>   <=> <right>)
   mot:        M-b <=> M-f (ou C-<left> <=> C-right)
   ligne:      C-p <=> C-n
   dans ligne  C-a <=> C-e
-  Ã©cran       C-v <=> M-v
-  dans Ã©cran  M-r
+  écran       C-v <=> M-v
+  dans écran  M-r
   dans buffer M-< <=> M->
 
-SÃ©lectionner et couper-coller la sÃ©lection
+Aller à la ligne numLigne
+  M-g g numLigne
+
+Sélectionner et couper-coller la sélection
   M-@  // Pose une marque
-  ...  // Se dÃ©placer jusqu'Ã  l'endroit souhaitÃ©
-  C-w  // Kill la sÃ©lection
-  ...  // Se rendre oÃ¹ on veut coller
+  ...  // Se déplacer jusqu'à l'endroit souhaité
+  C-w  // Kill la sélection
+  ...  // Se rendre où on veut coller
   C-y  // Yank le dernier kill
 
-Tout sÃ©lectionner
+Tout sélectionner
   C-x h
 
-Auto complÃ©tion rudimentaire
+Auto complétion rudimentaire
   M-\
 
-Supprimer le caractÃ¨re aprÃ¨s le point
+Supprimer le caractère après le point
   C-d
 
-Supprimer le mot aprÃ¨s le point
+Supprimer le mot après le point
   M-d
 
-Rechercher desCaractÃ¨res
-  C-s desCaractÃ¨res  // Recherche en avant
-  C-r desCaractÃ¨res  // Recherche en arriÃ¨re
+--------------------
+Chercher / remplacer
+--------------------
 
-Remplacer desCaractÃ¨res par autresCaractÃ¨res Ã  partir du curseur
-  M-% desCaractÃ¨res
+Rechercher desCaractères
+  C-s desCaractères  // Recherche en avant
+  C-r desCaractères  // Recherche en arrière
+
+Remplacer desCaractères par autresCaractères à partir du curseur
+  M-% desCaractères
   ENTREE
-  autresCaractÃ¨res
+  autresCaractères
   ENTREE
   y ou n ou !  // y: remplacer, n: ne pas remplacer, !: tout remplacer
 
-Aller Ã  la ligne numLigne
-  M-g g numLigne
+Remplacer un caractère par un saut de ligne
+  Copier le caractère fin de ligne (à la fin d'une ligne quelconque)
+  Copier se caractère dans le minibuffer avec C-y lorsqu'emacs demande avec quoi remplacer
 
 -------
-FenÃªtre
+Fenêtre
 -------
 
-Scinder l'Ã©cran horizontalement
+Scinder l'écran horizontalement
   C-x 2
   
-Scinder l'Ã©cran verticalement
+Scinder l'écran verticalement
   C-x 3
   
-Passer d'une vue Ã  l'autre
+Passer d'une vue à l'autre
   C-x o
   
 Supprime les autres vues
   C-x 1
 
-Fermer la fenÃªtre courante
+Fermer la fenêtre courante
   C-x 0
+
 ----------
 Navigation
 ----------
-Faire dÃ©filer l'Ã©cran
-  Pas de mÃ©thode simple
+
+Faire défiler l'écran
+  Pas de méthode simple
 
 -----
 Dired
 -----
-CrÃ©er un rÃ©pertoire
+
+Créer un répertoire
   +
 
 ----
 Aide
 ----
 
-AccÃ©der Ã  l'aide d'un mode majeur
+Accéder à l'aide d'un mode majeur
 
 ---------
 Aide Info
 ---------
-AccÃ©der au rÃ©pertoire "emacs" dans le rÃ©pertoire info (usr/share/info)
+
+Accéder au répertoire "emacs" dans le répertoire info (usr/share/info)
   C-h i
 
 Passer au lien suivant
   TAB
 
-Passer au lien prÃ©cÃ©dent
+Passer au lien précédent
   M-TAB
 
 Ouvrir un lien
@@ -141,7 +155,8 @@ Remonter d'un niveau
 -------------
 Programmation
 -------------
-CrÃ©er un fichier Makefile
+
+Créer un fichier Makefile
   CC=gcc
   CFLAGS=-g -Wall -Wstrict-prototypes
 
@@ -154,28 +169,30 @@ Compiler sans Makefile
   ...          // Taper la commande de compilation
   ENTREE
 
-Se dÃ©placer de fonction en fonction
+Se déplacer de fonction en fonction
   C-M-a  // Avancer
   C-M-e  // Reculer
 
-Commenter une sÃ©lection
-  ...      // SÃ©lectionner une region
-  C-c C-c  // Commente la rÃ©gion sÃ©lectionnÃ©e
+Commenter une sélection
+  ...      // Sélectionner une region
+  C-c C-c  // Commente la région sélectionnée
 
 --------
-DÃ©bogage
+Débogage
 --------
+
 M-x gdb
   Lancer gdb
 
 C-x `
-  Aller Ã  la ligne correspondant Ã  l'erreur de compilation suivante
+  Aller àla ligne correspondant à l'erreur de compilation suivante
 
 ------
 Divers
 ------
+
 Ouvrir le terminal dans emacs
-  M-x terminal (NB. M-x shell est un terminal "diminuÃ©")
+  M-x terminal (NB. M-x shell est un terminal "diminué")
 
 Copier depuis la clipboard
   clic-droit dans le terminal puis coller
