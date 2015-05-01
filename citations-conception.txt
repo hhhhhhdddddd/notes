@@ -17,6 +17,12 @@ Choose a data representation that makes the program simple.
 Let the data structure the program.
 -- Brian Kernighan, "The Elements of Programming Style", 2nd edition, 1978, p. .
 
+Show me your flowcharts and concel your tables, and I shall continue to be mystified. Show me your tables, and I won't usually need your flowcharts; they'll be obvious.
+-- Frederick P. Brooks, Jr., "The Mythical Man Month".
+
+Once the data structures are laid out, the algorithms tend to fall into place, and the coding is comparatively easy.
+-- Kernighan and Pike, "The Practice of Programming", p. 61.
+
 ------
 Clarté
 ------
