@@ -34,15 +34,14 @@ Choisir un buffer: dans une fenêtre contenant la liste des buffers ouverts
   FLECHES  // Fait passer d'un nom de buffer à l'autre
   ENTREE   // Sélectionne le buffer
 
-Supprimer une ligne
-  C-a  // Aller au début de la ligne
-  C-k  // Kill la ligne à partir du point jusqu'à la fin de ligne
 
-Supprimer les espaces
-  M-\
 
-Supprimer le mot suivant
-  M-d
+Supprimer
+  un caractère C-d
+  un mot       M-d
+  les espaces  M-\
+  une ligne    C-a  // Aller au début de la ligne
+               C-k  // Kill la ligne à partir du point jusqu'à la fin de ligne
 
 Se déplacer (arrière <=> avant)
   caractère:  C-b <=> C-f (ou <left>   <=> <right>)
@@ -69,12 +68,6 @@ Tout sélectionner
 Auto complétion rudimentaire
   M-\
 
-Supprimer le caractère après le point
-  C-d
-
-Supprimer le mot après le point
-  M-d
-
 --------------------
 Chercher / remplacer
 --------------------
@@ -99,10 +92,8 @@ Fenêtre
 -------
 
 Scinder l'écran horizontalement
-  C-x 2
-  
-Scinder l'écran verticalement
-  C-x 3
+  Horizontalement C-x 2
+  Verticalement   C-x 3
   
 Passer d'une vue à l'autre
   C-x o
