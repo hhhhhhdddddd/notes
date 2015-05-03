@@ -34,14 +34,29 @@ Choisir un buffer: dans une fenêtre contenant la liste des buffers ouverts
   FLECHES  // Fait passer d'un nom de buffer à l'autre
   ENTREE   // Sélectionne le buffer
 
-
-
 Supprimer
   un caractère C-d
   un mot       M-d
   les espaces  M-\
   une ligne    C-a  // Aller au début de la ligne
                C-k  // Kill la ligne à partir du point jusqu'à la fin de ligne
+
+Tout sélectionner
+  C-x h
+
+Auto complétion rudimentaire
+  M-\
+
+Sélectionner et couper-coller la sélection
+  M-@  // Pose une marque
+  ...  // Se déplacer jusqu'à l'endroit souhaité
+  C-w  // Kill la sélection
+  ...  // Se rendre où on veut coller
+  C-y  // Yank le dernier kill
+
+------------
+Déplacements
+------------
 
 Se déplacer (arrière <=> avant)
   caractère:  C-b <=> C-f (ou <left>   <=> <right>)
@@ -55,18 +70,8 @@ Se déplacer (arrière <=> avant)
 Aller à la ligne numLigne
   M-g g numLigne
 
-Sélectionner et couper-coller la sélection
-  M-@  // Pose une marque
-  ...  // Se déplacer jusqu'à l'endroit souhaité
-  C-w  // Kill la sélection
-  ...  // Se rendre où on veut coller
-  C-y  // Yank le dernier kill
-
-Tout sélectionner
-  C-x h
-
-Auto complétion rudimentaire
-  M-\
+Déplacer la ligne courante
+  C-l  // Centre, puis haut, puis bas
 
 --------------------
 Chercher / remplacer
