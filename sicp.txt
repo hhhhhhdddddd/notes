@@ -7,3 +7,5 @@
 Combination. Expression formée en délimitant une liste d'expressions par des parenthèse.
 
 Define. Le plus simple moyen d'abstraction. Il permet d'utiliser des noms simples pour faire référence aux résultats d'opérations composées.
+
+Compound procedures. Une procédure définie avec define. Used the same way as primitives procedures.
