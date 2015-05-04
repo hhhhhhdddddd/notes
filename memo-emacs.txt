@@ -183,9 +183,32 @@ M-x gdb
 C-x `
   Aller àla ligne correspondant à l'erreur de compilation suivante
 
+--------
+Packages
+--------
+
+Ajouter un dépôt
+  Ajouter (par exemple) le code suivant dans .emacs
+
+(require 'package) ; évite l'erreur "Symbol's value as variable is void: package-archives"
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+
+Installer un paquet
+  M-x package-list-packages
+  i  // Marque pour installation
+  x  // Télécharge et installe les paquets marqués
+  
 ------
 Divers
 ------
+
+Changer de mode
+  M-x nomDuMode
+
+Recharger .emacs
+  M-x load-file  // Recharge le fichier en cours d'édition
+  ou
+  C-x C-e        // Evalue seulement la dernière sexp
 
 Ouvrir le terminal dans emacs
   M-x terminal (NB. M-x shell est un terminal "diminué")
@@ -198,3 +221,11 @@ Installer emacs sans GUI
 
 Lancer emacs dans le terminal (en cas d'installation avec GUI)
   > emacs -nw
+
+Ouvrir le menu en mode console
+  F10
+  ou
+  M-x menu-bar-open
+
+Changer le thème
+  Options -> Customize Emacs -> Custom Themes -> misterioso (une thème sympa)
