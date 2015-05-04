@@ -73,6 +73,12 @@ Aller à la ligne numLigne
 Déplacer la ligne courante
   C-l  // Centre, puis haut, puis bas
 
+Modifier la casse: en majuscule
+  M-u      // Met le mot suivant en majuscule
+  C-x C-u  // Met la région en majuscule
+  M-l      // Met le mot suivant en minuscule
+  C-x C-l  // Met la région en minuscule
+
 --------------------
 Chercher / remplacer
 --------------------
@@ -80,6 +86,9 @@ Chercher / remplacer
 Rechercher desCaractères
   C-s desCaractères  // Recherche en avant
   C-r desCaractères  // Recherche en arrière
+
+Modifier le texte recherché
+  M-e
 
 Remplacer desCaractères par autresCaractères à partir du curseur
   M-% desCaractères
