@@ -1,3 +1,23 @@
+---
+Tout (langage, code, etc.) penser dans un cadre problème/solution. Si quelque chose n'est pas la solution d'un problème identifié, commencer par ne pas l'utilisier.
+
+---
+D'abord et avant tout : que ça soit maintenable
+
+---
+D'abord et avant tout : que ça soit maintenable, c'est-à-dire que
+1/ ça puisse être pris en main rapidement par quelqu'un d'autre, autrement dit que ça puisse être compris aisément
+2/ les modifications puissent se faire naturellement, autrement dit que les endroits à modifier saute aux yeux ou soit identifiable facilement (après une simple recherche ou une lecture de la doc)
+
+Meilleur outil pour y parvenir : faire preuve de bon sens
+
+---
+Modules
+
+Meilleurs analogies: "On l'initialise avec ce qu'il faut et après ça se démerde !!" Sous-entendu "Ca se démerde tout seul". Et tant qu'à faire ça n'est pas impacté par les modifications de "l'initialiseur" si ce n'est pas absolument nécessaire.
+
+---
+
 Ne pas obliger à partir à la chasse.
 Ne pas mélanger spécifique et générique.
 Produire des modules (objet, etc.) autonome et générique.
@@ -10,3 +30,9 @@ Que les modules ne fassent pas de supposition sur les autres modules, qu'ils se 
 
 Que les modules soient autonomes dès l'initialisation.
 
+---
+
+Il faut objectiver les différentes partie de l'appli
+- la partie métier, évidemment.
+- la partie UI
+- la partie...
