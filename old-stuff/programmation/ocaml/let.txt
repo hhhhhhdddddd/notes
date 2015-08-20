@@ -1,0 +1,1 @@
+Une définition globale n'est pas une expression.

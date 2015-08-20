@@ -1,0 +1,37 @@
+Multiplier par une puissance de 10 revient à coller les zéros se
+trouvant derrière le 1 derrière le nombre qu'on multiplie.
+
+  1000 * 253, = 235 000
+
+Si on multiplie par une puissance de 10 on ajoute le nombre de zéro
+indiqué par la puissance
+
+  10^3 * 253, = 253 000
+
+La puissance donne le nombre de zéros à coller à droite du nombre
+multiplié.
+
+  23, / 10 000 = 
+
+         23, 2 chiffres
+  / 1 0 000  4 zéro
+  ---------
+    0,0 023  on ajoute deux zéros, on ferme par une virgule.
+
+La virgule est un curseur se trouvant à droite du nombre. Les zéros
+indique le nombre de fois qu'il faut la déplacer vers la gauche.
+
+Désaventageux de voir un curseur, on ne voit rien.
+
+Méthode 1. Faire précéder le nombre de zéros et ensuite déplacer le
+curseur.
+
+Méthode 2. Ajouter le nombre de zéro correspondant à la différence du
+nombre de zéros et le nombre de chiffre du nombre à diviser.
+
+On finit toujours par cloturer l'opération par une virgule et un zéro
+qui ne compte pas.
+
+Il y a un curseur se trouvant derrière le dernier chiffre du nombre,
+les zéros indiquent de combien de place le déplacer à droite pour la
+multiplication, à gauche pour la division.

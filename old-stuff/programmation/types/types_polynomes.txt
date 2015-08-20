@@ -1,0 +1,22 @@
+Un polynome est soit un monome, soit la somme d'un monome et d'un
+polynome. Ce qu'on traduit directement par 
+
+  type polynome = monome | Somme monome * polynome;;
+
+Plutot que d'appeler le constructeur Somme, comme le résultat de
+l'opération, on peut l'appeler Plus, directement comme l'opération. 
+
+  type polynome = monome | Plus monome * polynome;;
+
+En fait l'opération est l'addition. Le nom Plus est en fait le nom du
+symbole de l'addition. On choisit de un nom qui facilite la lecture
+des expression (si l'expression était infixe). 
+
+En fait, on nomme comme on le voit, et comme on le lit dans une
+expression normale
+
+  X^2 + 3 X + 5
+
+à savoir, "x deux PLUS trois x PLUS cinq".
+
+Ici le constructeur est l'opérateur, c'est bien Plus.

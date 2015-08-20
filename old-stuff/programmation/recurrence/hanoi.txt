@@ -1,0 +1,25 @@
+On doit faire l'hypothèse sur les anneaux supérieur.
+
+En récurrence la première action à lieu (la première opération est
+effectuée) lorsqu'on a atteint le cas de base. 
+
+Or si l'on fait l'hypothèse sur les anneaux du bas, le cas de base est
+atteint sur le plus grand anneau au fond de la pile et on ne peut pas
+le déplacer car il a au dessus de lui les autres anneaux qui n'ont pas
+encore bougé car la première action à lieu lorsque le cas de base est
+atteint. Et on l'atteint sur l'anneau au fond de la pile qui ne peut
+pas bouger.
+
+Si on fait l'hypothèse sur les anneaux du dessus le cas de base est
+atteint sur le plus petit anneau, tout en haut qui n'a personne au
+dessus de lui et qui peut donc être bougé.
+
+On pourrait se dire, quitte à supposer que je sais déplacer (n-1)
+anneaux, pourquoi pas ceux du bas ? Mais comme nous venons d'essayer
+de le justifier, ça ne marche pas.
+
+Ce qui justifie rétrospéctivement le choix des règles de
+déplacement. L'oeuf ou la poule... Qui justifie qui ? Le jeu marche car
+la récurrence peut s'appliquer ou bien l'inverse... (enfin bon, j'me
+comprends) 
+

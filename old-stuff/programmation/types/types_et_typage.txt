@@ -1,0 +1,43 @@
+Les types permettent d'introduire dans le système des noms utilisables
+par le programmeur.
+
+Type enregistrement Ocaml
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+La déclaration suivante, introduit quatre noms, celui du type et celui
+des étiquettes.
+
+  type date = { jour:int; mois:int; annee:int }
+
+Lorsqu'Ocaml rencontre le nom d'une étiquette, il se reporte au nom au
+sommet de l'arbre auquel se nom appartient, ce qui lui donne le nom du
+type et qui lui permet de typer les expressions faisant intervenir une
+des étiquettes. Ce qui permet de ne pas utiliser toutes les étiquettes
+d'un enregistrement dans un filtre (pattern).
+
+Arbre du type et des étiquettes qui lui sont attachées.
+
+type        étiquettes
+
+date --+-- jour
+       |
+       +-- mois
+       |
+       +-- année
+
+Lors du typage, Ocaml remplace les valeurs par leur type et vérifie
+que cela correspond à ce qu'il sait (puisqu'on l'a déclaré avant) que
+la fonction attend.
+
+Lors de l'utilisation d'un nouveau type composé, on remplace chacun
+des types qui le compose par une valeur lui appartenant au type composant.
+
+Déclaration de type
+^^^^^^^^^^^^^^^^^^^
+
+Dans une déclaration de type il n'y a que des nouveaux identificateurs
+(en Ocaml en tout cas) et des types. Il n'y a pas de valeurs.
+
+Dans la déclaration d'une valeur d'un type composé il n'y a que des
+identificateurs (préalablement déclarés) et des valeurs correspondant
+aux types. Il n'y a pas de types.

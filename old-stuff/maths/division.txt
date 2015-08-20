@@ -1,0 +1,70 @@
+Division entière
+^^^^^^^^^^^^^^^^
+
+Diviser = être dedans un nombre entier de fois.
+
+Le nombre (le dividende) peut être obtenu par addition de son diviseur
+seulement.
+
+3 divise 15 : 15 peut être obtenu par addition de 3 seulement.
+
+  15 = 3+3+3+3+3 = 5 * 3
+
+5 divise 15 : 15 peut être obtenu par addition de 5 seulement.
+
+  15 = 5+5+5 = 3 * 5
+
+1 divise 15 : 15 peut être obtenu par addition de 3 seulement.
+
+  15 = 1+1+1+1+1+1+1+1+1+1+1+1+1+1+1
+
+On voit que 1 divise tous les entiers car tout entier peut être
+obtenue en ajoutant 1 un certain nombre de fois.
+
+Autrement dit
+
+  a|b ssi a = qb
+
+Division euclidienne
+^^^^^^^^^^^^^^^^^^^^
+
+Le reste est le premier "intrus" inférieur au nombre qu'on additionnne
+dans la suite d'addition
+
+  17 = 3+3+3+3+3+2 = 5*3+2
+
+  18 = 5+5+5+3 = 3*5+3
+
+Et la soustraction dans tout ça
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Qui dit addition dit soustraction. On peut obtenir ce qu'on cherche
+par soustraction successive. La division, c'est-à-dire le procédé
+permettant d'obtenir le diviseur d'un nombre peut ainsi être considérée
+comme une généralisation de la soustraction. On soustrait autant de
+fois qu'on peut un nombre donné pour voir s'il s'agit d'un diviseur
+d'un nombre, et on compte le nombre de soustraction, comme ça on saura
+combien de fois il faut l'ajouter pour obtenir le dividende. Si on ne
+fait que soustraire cette information nous manquera et on ne pourra
+pas reconstituer la succession d'addition. Par contre on pourra
+toujours la conclure par le reste qui sera le premier résultat de
+soustraction inférieur à diviseur potentiel qui sera dit diviseur
+(réel) seulement si il n'y a pas de reste, c'est-à-dire si la dernière
+soustraction à pour résultat zéro.
+
+    (base: 0 soustraction)
+ 18
+- 5 (car 18>5) 
+---
+ 13 (0+1=1 soustraction effectuée)
+- 5 (car 13>5) 
+---
+  8 (1+1=2 soustractions effectuées )
+- 5 (car 8>5) 
+---
+  3 (2+1=3 soustractions effectuée)
+Stop:  car 3 < 5 donc 3 = reste
+
+Deux informations utiles ici. Le nombre de soustraction et le
+reste. Donc, on compte les soustraction, ici 3, et on conserve,
+remonte le reste, ici 3.

@@ -1,0 +1,18 @@
+A l'allée on ne peut...
+^^^^^^^^^^^^^^^^^^^^^^^
+
+A l'allée, ou lors de le descente on ne peut que modifier les
+paramètres pour les faire tendre vers le cas de base. 
+
+A la relecture, le sens donné aux opérations effectuées pour ce faire est à
+interpréter d'après la définition mathématique sur laquelle s'appuie
+la manière de déclarer la fonction.
+
+Ce qui se fait au retour
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+C'est seulement au retour que les opérations sont effectuées.
+
+Les opérations ne sont pas posées, écrite lors de la descente, même si
+c'est comme ça que l'on voit les choses lorsqu'on essait de trouver
+comment définir la fonction.

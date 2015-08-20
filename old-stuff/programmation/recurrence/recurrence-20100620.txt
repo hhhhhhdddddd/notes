@@ -1,0 +1,126 @@
+Définir une fois, laisser faire jusqu'à... 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Jusqu'à quoi ? Bien choisir son cas de base et la valeur retournée. 
+
+Et faire quoi ? Ce qu'on a énoncé une fois, ce qu'on a jugé nécessaire
+de faire pour passer d'un résultat à l'autre. Fournir à notre fidèle
+serviteur les instruments à mettre en oeuvre (addition,
+multiplication) pour obtenir la victoire en notre nom.
+
+Principe de définition récursive
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Une fonction récurisive est toujours, quelque soit sa forme (avec un
+let in ou sans, etc.), toujours défini de la même manière. Le résultat
+que l'on souhaite est calculé en utilisant, en supposant connu l'appel
+de la fonction sur un arguement plus petit.
+
+La seul valeur retourné est celle du cas de base, elle est soit
+remontée telle quelle, soit travaillée lors de la remontée d'appel en
+appel. Mais pour la retourner il faut une condition d'arrêt.
+
+L'appel doit s'effectuer sur une argument plus petit. Le travail,
+l'action effectuée sur l'argument orginal pour le rendre plus petit
+"encapsule" la propriété sur laquelle est fondée la proposition (ou le
+théorème) qui défini l'objet qui sera le résultat de la fonction.
+
+La condition d'arrêt peut être significative (comme dans le cas de la
+division) ou négociable.
+
+La valeur retourné lors quand on atteint le cas de base peut être
+significative ou être choisi pour ne pas modifier le résultat
+construit lors de la descente, un élément neutre pour l'opération
+intervenant dans la construction du résultat. Si on construit une
+somme on choisira 0 et si on produit 1.
+
+Pourquoi ça marche
+^^^^^^^^^^^^^^^^^^
+
+Le principe est donc de supposer le résultat connu sur un argument
+plus petit et de passer de se résultat au résultat de l'appel avec
+l'argument plus grand, et ce en faisant appel à des connaissances
+préalable, théorèmes, définition récursive, etc. C'est ce travail fait
+sur le résultat supposé connu (et effectué pour passer au résultat
+souhaité) qui permet, d'appel récursif en appel récursif, d'arriver au
+résultat souhaité. 
+
+On a l'impression de ne faire se travail qu'une fois (on se donne un
+résultat et on fait ce qu'il faut pour en obtenir un autre) mais ce
+travail, ses opérations seront effectuées lors de chaque passage d'un
+appel à l'autre jusqu'à arriver au cas de base. Et c'est la répétition
+de ses opérations qui permet d'obtenir le résulat souhaité. 
+
+Cette répétion n'est pas apparente car tout ce qu'on fait c'est
+d'ajouter, UNE FOIS POUR TOUTE, les opérations nécessaire pour passer
+d'un résultat à l'autre. On fait le travail une fois mais les
+opérations sont répétée plusieurs fois, le nombre de fois qu'il faut
+(si le cas de base est bien choisi)
+
+C'est en effectuant ces opérations le nombre de fois qu'il faut que la
+récurrence parvient au résultat. Sans le savoir on lui fournit les
+outils nécessaire (sous la forme des opérations nécessaire pour passer
+d'un résultat à l'autre) pour façonner le résultat à partir de
+l'argument de départ en le travaillant avec ces opération à chaque
+appel récursif. Après le façonnage efféctué par chaque appel récursif
+l'argument tend toujours un peu plus vers le résultat.
+
+Par exemple, on dira, pour passer d'un résultat à l'autre il suffit
+d'ajouter un. On le dit une fois, mais l'incrémentation sera efféctuée
+plusieurs fois. C'est la que la récurrence effectue le travail
+permettant de parvenir au résultat. Qu'à chaque appel, elle façonne
+l'arguement avec l'outil qu'on lui a fournit, ici l'addition.
+
+Et tout ça marche simplement par construction, par définition, c'est
+la magie de la récurrence.
+
+La récurrence est un processus dynamique déterminer de manière
+statique.
+
+On définit naivement une fois et sans le savoir on fournit les armes
+nécessaire à l'accomplissement de notre volonté. On a l'impression de
+graver quelque chose dans le marbre, de figer une définition, le
+résultat du suivant se défini de telle manière à partir du résultat du
+précédent, d'être dans le statique mais en fait on met en branle un
+processus dynamique, mouvant, tout sauf figé.
+
+En fait, si l'on y regarde plus près, ce qu'on défini vraiment c'est
+le passage d'un "état" à un autre. D'un résultat à un autre, c'est un
+passage. Et le passage est un processus dynamique. C'est une
+succession d'état depuis un état de base. Donc, c'est vraiment une
+répétition. On part d'un endroit et par une succession d'action on
+arrive à un autre, c'est un mouvement. 
+
+-- Remarque -- Le cas de base n'est pas l'endroit où l'on arrive, ce
+n'est pas la fin, ce n'est que le commencement. C'est l'endroit d'où
+l'on part (après l'avoir atteint, certes) c'est là que tout commence,
+c'est sur lui qu'on commence à travailler, pas avant. Avant de l'avoir
+atteint, rien n'est fait que de mettre en place les outils et
+matériaux nécessaire. C'est sur lui que le travail est effectué.
+
+-- Remarque --
+Les opérations seront posées à l'allée, lors de la descente, et seront
+effectuée lors au retour, lors de la remontée.
+
+Remarques
+^^^^^^^^^
+
+-- Remarque --
+Souvent un compteur est utilisé pour compté les appels récursif qui se
+trouve souvent avoir une signification relativement au calcul que la
+fonction effectue.
+
+-- Remarque --
+Le résultat que nous visualisons est généralement construit lors
+de la remontée et non lors de la descente. Lors de la descente les
+éléments sont mis en place mais les travaux ne sont effectué que lors
+de la remontée.
+
+Le principe de récurrence part de zéro et va jusqu'à l'infini. Une
+définition récursive prend un point quelconque entre les deux et
+redescend vers zéro, c'est un processus fini. Une application de la
+définition récursive prend un point particulier et descend vers zéro. 
+
+
+
+

@@ -1,0 +1,6 @@
+C'est une combinaison de "if..then..else" et de nommage locaux.
+
+Un filtre (ou motif ou pattern) désigne un ensemble (de valeur), et
+vérifier la une correspondance d'une valeur avec un filtre c'est
+vérifier l'appartenance de cette valeur à l'ensemble que désigne le
+filtre. Une constante désigne un singleton (cf. apprentissage Ocaml)

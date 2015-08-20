@@ -1,0 +1,33 @@
+L'expression
+
+  prix_hors_taxe * (1 + tva) 
+
+est un raccourci d'écriture pour 
+
+  prix_hors_taxe + (prix_hors_taxe * tva)
+
+où (prix_hors_taxe * tva) représente la quantité qu'il faut ajouter
+au prix hors taxe pour obtenir le prix TTC. Cette quantité dépend du
+prix hors taxe et d'une constante, la tva.
+
+-- remarque --
+Un taux est toujours inférieur à 1. par exemple, le taux de tva est de
+0.196. Quand on dit que la tva est de 19.6, on veut dire que le tva
+est 19.6%, c'est-à-dire (19.6 / 100), du prix hors taxe.
+
+
+-- Exemple --
+  25 + (25 * 0.196)
+
+ou encore si on utilise le fameux "19.6%"
+
+  25 + (25 * (19.6/100))
+
+Une multiplication devant une expression parenthèsées contenant des
+"+" ou des "-" est un raccourci d'écriture qui évite d'avoir à répéter
+la multiplication pour chaque composant de l'expression.
+
+  x * (a1 + a2 + ... + an) = (x * a1) + (x * a2) + ... + (x * an)
+
+La factorisation évite la répétition. La distributivité exhibe la
+répétition de l'opération.

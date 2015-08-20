@@ -1,0 +1,15 @@
+La programmation étant déclarative, les programmes sont des
+déclaration, des définitions de la forme "x" ou  "x est le produit de
+telles actions sur tels autres objets". Par exemple, "le deuxieme
+élément d'une liste est la tête de la queue de cette liste". Ce qui se
+traduit littéralement par : 
+
+  deuxieme_element = tete (queue liste)
+
+Donc le nom des fonctions n'a pas, ne doit pas être forcément un
+verbe. Il peut être un nom propre désignant l'objet qu'on obtient en
+résultat. Par exemple, (queue liste) désigne la queue de la liste, ce
+qui est mieux que (prendre_queue liste) ou je ne sais quoi, qui est un
+nommage à l'impérative, on donne un ordre, alors qu'en fonctionnelle
+on décrit, on déclare le résultat, ceci est la tête ou la queue de la
+liste, et non pas il faut prendre la tête ou la queue..

@@ -1,0 +1,37 @@
+Ce livre est publié cher Hermes donc il est cher, mais il vaut son
+pesant de cacahouètes. Les explications sont limpides, vraiment. Les
+exemples sont très bien choisis. Ils susciteront la réflexion chez le
+débutant et l'émerveillement chez l'étudiant plus expérimenté tant les
+algorithmes sont clairs lorsqu'ils sont exprimés dans un langage
+fonctionnel (et je trouve Ocaml beaucoup, beaucoup plus clair que
+scheme, mais c'est une question de gouts). 
+
+Bref, c'est à vous dégouter de la programmation impérative bien que ça
+ne soit pas le but des auteurs qui au contraire souhaitent montrer
+"que les deux styles sont complémentaires, mieux, qu'ils se
+nourrissent l'un de l'autre".
+
+C'est à se demander pourquoi la programmation fonctionnelle n'est pas
+plus répandu... C'est à ne pas comprendre l'engouement pour les
+langages impératif ou objet au détriment de Ocaml qui offre les
+avantages des deux (je devrais dire des trois) mondes : fonctionnel et
+impératif (et objet), et ce, d'une manière claire et élégante. Ce qui
+contraste avec d'autre langage "multiparadigme" qui n'arrive pas à
+concilier simplement deux paradigmes sans recourir à une synthaxe
+boursouflée (pour rester poli). 
+
+Le livre ne traite pas de la programmation objet. Mais présente très
+bien et la programmation fonctionnelle et la programmation
+impérative. Tous les programmes récursifs classiques que l'on présente
+dans un cours d'introduction à la programmation fonctionnelle sont
+présents et permettent ainsi au lecteur de "faire ses gammes" sur ces
+petits programmes récursifs. Les tris élémentaires sont présentés dans
+leur version fonctionnelle et impérative, et c'est là que beaucoup
+seront frappés par la "beauté", la simplicité, la clareté des versions
+fonctionnelles. Et se poseront les mêmes question que moi quant au peu
+de visibilité dont bénéficie la programmation fonctionnelle.
+
+Bref, ce livre est cher mais chaque centime est rentabilisé. Mon livre
+préféré d'introduction à la programmation (et j'en ai parcourus
+beaucoup autant anglais que français).
+

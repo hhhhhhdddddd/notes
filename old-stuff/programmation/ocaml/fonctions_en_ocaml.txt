@@ -1,0 +1,40 @@
+Une fonction est une expression de la forme
+
+  function a -> if (a < 0) then (-a) else a;;
+
+lire : "la fonction qui à a associe...". Une telle expression n'a pas
+de nom, on parle de fonction anonyme.
+
+Le type d'une fonction contient une ou plusieurs flèches. Le type se
+trouvant en dernière position est celui du résultat de la
+fonction. Les autres, ceux se trouvant avant, sont les types des
+paramètres.
+
+La valeur d'une telle expression est une une suite d'instruction
+machine permettant de réaliser le processus de calcul décrit par le
+corps de la fonction.
+
+On peut nommer une fonction comme tout autre expression
+
+  let abs = function a -> if (a < 0) then (-a) else a;;
+
+ou encore 
+
+  let abs a = if (a < 0) then (-a) else a;;
+
+Une fonction à plusieurs argument se définit 
+
+  let une_fonction a1 a2 ... an = corps;;
+
+ou
+
+  let une_fonction = 
+    function a1 -> function a2 -> ... -> function an -> 
+      corps;;
+
+Dans les deux cas l'application est la même
+
+  une_fonction a1 a2 ... an;;
+
+Autant de paramètre que de mot "function" ou à chaque paramètre est
+introduit par ce mot.

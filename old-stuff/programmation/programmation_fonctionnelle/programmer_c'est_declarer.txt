@@ -1,0 +1,43 @@
+L'essence de la programmation déclarative
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+(sur un exemple simple)
+
+Par exemple, on a la définition suivante : le deuxième élément d'une
+liste est la tête de sa queue. Le deuxième élément d'une liste est
+défini en terme de la tête d'une liste et de sa queue. Il nous faut
+donc disposer des deux objets tête et queue, en programmation
+fonctionnelle la manière d'obtenir de tels objets est de définir des
+fonctions qui les constuisent. Soit 
+
+  let tete l = match l with
+    | []   -> failwith "tete : vide"
+    | x::_ -> x;;
+
+et 
+
+  let tete l = match l with
+    | []   -> failwith "tete : vide"
+    | _::l' -> l';;
+
+On peut maintenant appliquer directement la défintion
+
+    let deuxieme l = tete (queue l);;
+
+qu'on lit littéralement comme : "soit le deuxième élément d'une liste
+la tête de sa queue" qui est une transcription quasi littéral de la
+définition mathématique après introduction des fonctions adéquates.
+
+--
+
+Si on dispose de deux fonction tête et queue on peut alors définir la
+fonction deuxième qui retourne le deuxième élément d'une liste. Il
+suffit d'être capable de définir le deuxième élément d'une liste en
+termes de la tête d'une liste de sa queue. Ce qu'on peut faire comme
+suit : deuxième élément d'une liste est la tête de sa queue, on a donc
+
+  let deuxieme l = tete (queue l);;
+
+En fait il suffit de disposer d'une définition et de définir les
+fonctions permettant de construire les objets à partir desquels
+l'objet de la définition est défini. 

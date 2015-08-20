@@ -1,0 +1,5 @@
+c'est l'ensemble de départ qui permet de les classer N ou autre chose
+autre chose : fonction réelle (complex) ou plutot fonction d'une
+variable réelle, etc.
+
+N : on dit suite

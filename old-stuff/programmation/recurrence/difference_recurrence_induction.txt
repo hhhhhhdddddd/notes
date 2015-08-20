@@ -1,0 +1,14 @@
+La récurrence est un processus fini, avec un point de départ, le haut
+du triangle inversé "\/", l'argument original, l'oignon avec toutes ses
+pelures "((|))", et un point d'arrivée, de terminaison, les atomes,
+éléments indécomposable, le sommet du triangle inversé ".", le bulbe de
+l'oignon "|".
+
+L'induction est un processus infini, qui par de la base et ne s'arrête
+jamais.
+
+L'argument sur lequel on travaille est construit de manière inductive,
+mais l'induction a été stoppé quand on a eu l'argument qu'on a
+voulut. Une structure récursive est le résutat d'une construction
+inductive qui a été stoppé, donc d'un processus fini, car on ne sait
+pas travailler sur des structures infinies.

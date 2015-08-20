@@ -1,0 +1,21 @@
+La récurrence c'est explicité un changement d'état, comment on passe
+du précendent à son suivant, en supposant connu le résultat de l'application
+de la fonction en cours de définition au précédent.
+
+La clé : supposé connaitre le résultat de la fonction appliquée sur la
+donnée précédente, et habiller, de telle sorte à obtenir à obtenir le
+résultat suivant.
+
+Et parer ce dernier des opérations nécessaire à l'obtention du
+résultat suivant.
+
+Habiller le plus petit pour obtenir le plus grand.
+
+La récurrence, une répétion cachée... Ou comment définir statiquement
+un processus tout ce qu'il y a de plus dynamique... et ça marche.
+
+La récurrence, c'est le droit d'y croire.
+
+La récurrence, c'est un droit : celui d'y croire.
+Et un devoir : ne pas aller trop loin.
+C'est la religion idéale :)

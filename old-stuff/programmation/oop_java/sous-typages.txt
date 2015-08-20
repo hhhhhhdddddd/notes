@@ -1,0 +1,51 @@
+Sous-typage (ou polymorphisme d'inclusion)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Soit une arborescence, c'est-à-dire un type à la racine et ses
+sous-types dans les braches et aux feuilles.
+
+Alors, une variable déclarée de type la racine accepte toutes
+l'arborescence mais filtrée par la racine, c'est-à-dire que ne seront
+accessible des sous types que les fonctionnalités présente, déclarée
+(c'est-à-dire nommée) dans le type racine, mais ces fonctionnalités
+seront celles des sous-types, c'est-à-dire que le code exécuté sera
+celui des sous-types.
+
+
+Cm --- Sc1 --- Sc11
+       |
+       Sc2--- Ssc21
+              |
+              Ssc22
+
+Soit la déclaration : 
+
+  Cm o;
+
+la variable o accepte tout les sous-type (Sc1, Sc2, Sc11, Sc21,
+Sc22). C'est-à-dire qu'on pourra avoir par exemple :
+
+  o = new Sc21
+
+Dans une déclaration comme :
+  Cm o = new Sc21();
+Cm est le type déclaré et Sc21 est le type réel. De ses  sous-type on
+ne verra que les éléments (variable d'instance et méthodes déclarés
+dans C MAIS le code exécuté sera celuidu type réél.
+
+On peut voir les fonctionnalités classe mère comme encapsulées dans
+chacun des sous-types, c'est à cette partie encapsulée qu'on a
+accés. Le sous-typage filtre cette partie et évacue le reste.
+
+Cm
+| vi1; vi2;
+| m1(); m2(); m3();
+
+Si Sc1 défini en plus vi11, m11() et m12()
+
+Sc1
+| vi1; vi2;
+| m1(); m2(); m3();
+  | vi11;
+  | m11();m12
+
+On n'a accés qu'à la partie commune. Le premier étage.

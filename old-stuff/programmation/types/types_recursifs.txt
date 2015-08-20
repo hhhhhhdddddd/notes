@@ -1,0 +1,29 @@
+Il y a deux types de types récursifs. Ceux dont les éléments, une
+instance (UN polynome particulier, UNE pile particulière, UN arbre
+particulier, UNE liste particulière) sont construit par définition,
+comme les arbres ou les listes. Ceux qui sont construit par
+l'application d'une opération
+
+-- Par opération --
+
+Un polynome est la somme d'un monome et d'un polynome (dont le dernier
+est vide), c'est le résultat de l'addition (d'un plus) entre un monome
+et un polynome.
+
+Une pile est le résultat de l'empilement (l'opération empiler) d'un
+objet d'un certain type sur une pile d'objet de ce type.
+
+Une liste est le résultat de l'ajout d'un élément en tête d'une liste.
+
+Un des constructeur sera donc l'opération en question
+
+  Plus monome * polynome
+
+  Empile truc * pile
+
+On remarque que dans la définition récursive par convention on place à
+gauche le type récursif.
+
+
+-- Par définition --
+

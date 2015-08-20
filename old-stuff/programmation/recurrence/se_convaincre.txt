@@ -1,0 +1,16 @@
+Un conseil : si nécessaire (et ça l'est souvent pour le débutant) se
+convaincre que ça marche sur les petites structures en traçant
+l'exécution de la fonction.
+
+Car ensuite, quand on travail sur des structures plus complexes, comme
+les arbres, il est trop tard. 
+
+Mais le plus simple reste de prendre la récurrence comme le droit de
+supposer que ça fonctionne sur le précédent et de construire le
+suivant. De cette manière il n'y a pas à se poser la question de
+savoir comment la fonction effectue le calcul.
+
+Et la méthode de traçage la plus rapide, sur les structures simples,
+reste celle des points de suspension. On pose n à un bout, la valeur
+de base à l'autre, et deux valeur après n et deux valeur avant la
+valeur de base, on infère le sens de la fonction et c'est bon.

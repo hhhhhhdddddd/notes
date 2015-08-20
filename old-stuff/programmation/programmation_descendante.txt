@@ -1,0 +1,19 @@
+C'est rédiger l'algorithme qui résoud le problème ou qui effectue les
+actions demander en supposant l'existence de toutes les fonctions dont
+on a besoin, toutes les fonctions nécessaire à la rédaction d'un
+algorithme simple et claire sans souci d'optimisation.
+ 
+Ce principe s'applique récursivement. En effet, on rédige de la même
+manière les fonctions dont on a besoin. On rédige leur corps en
+supposant disposer de ce dont on a besoin.
+
+Comme l'a fait remarquer un de mes camarades de classe, il suffit
+d'écrire ce qu'on veut et de compléter ensuite. 
+
+La récurrence est un cas particulier de programmation descendante,
+c'est lorsqu'on se rend compte qu'une des fonctions dont on a besoin est la
+fonction en cours de rédaction. Dans ce cas il faut s'assurer que
+l'appelle récursif se fera sur un argument "plus petit". Une fois cet
+appel récursif rédiger, on complète l'expression de manière à obtenir
+le résultat de l'appel sur l'argument originel (cf. l'article sur la
+récurrence). 

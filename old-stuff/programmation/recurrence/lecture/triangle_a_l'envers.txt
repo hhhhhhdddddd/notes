@@ -1,0 +1,15 @@
+Voir les structures sur lesquelles sont appelées les fonctions
+récursive comme des triangles à l'envers et/ou des oignons qu'on pele,
+pelage qui mènera forcément aux atomes.
+
+  let rec fac n = match n with
+  | 0 -> 1
+  | n -> n * fac (n-1);;
+                  ^^^ 
+                  pelage, on enlève un couche
+
+n-1 : pelage, on enlève un couche
+fac (n-1) : ce qu'on suppose connu
+n * : ce qu'on va faire au retour, n fois (sur 1)
+
+n * (n-1) * ... 2 * 1

@@ -1,0 +1,25 @@
+Valable depuis après "in" jusqu'avant le fermeture de son bloc, qui
+peut être fermé par une parenthèse fermante ou directement par ";;".
+
+Un "let in" (ou un match) est nécessaire à chaque fois que le résultat
+est autre chose qu'un type de base, et ce pour capturer le résultat
+dans la structure qui lui est propre.
+
+Dans factorielle
+
+let factorielle n = 
+
+Si il n'y a rien devant un "let..in" cela donne une expression anonyme.
+
+Let..in et récurrence
+^^^^^^^^^^^^^^^^^^^^^
+
+Toujours, on suppose connu le résultat de l'application de la fonction
+sur le précédent. Mais lorsque ce résultat est d'un type composé il
+faut être capable de le récupérer, et cela se fait dans un "let..in"
+
+  let (q, r) = div (a-b, b) in (q+1, r);;  
+
+Le résultat (supposé connu) de l'application sur le précendent est
+(q,r) (qu'on a capturé dans un "let..in") qu'on peut ensuite travailler pour obtenir le résultat du
+suivant.

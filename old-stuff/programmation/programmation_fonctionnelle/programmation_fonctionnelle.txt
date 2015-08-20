@@ -1,0 +1,21 @@
+La programmation fonctionnelle en deux étapes.  
+
+1) apprendre à programmer 
+- avec des fonctions sans effets de bords.
+- sans affectation et 
+- sans boucles et 
+- avec des valeurs nommée plutot qu'avec des adresses nommées.  
+
+2) Ensuite maitriser l'ordre supérieur
+
+C'est nommer, des valeurs ou des usines à produire des valeur : les
+fonctions, qu'on peut aussi considérer comme étant des valeurs
+potentiel ou en devenir.
+
+Le truc est d'être capable de suivre l'enchainement des définitions
+jusqu'à celle du programme finale utilisant toutes les précédentes. De
+suivre ou d'avoir confiance dans la construction progressif de
+l'édifice. Le mieux est de se convaincre à chaque étape que chaque
+maillon fait correctement ce qu'il doit faire, comme ça on peut
+regarder le programme final en admettant comme correct les fonctions
+utilisées. 

@@ -1,0 +1,58 @@
+Les pelures sont les constructeurs. A chaque fois qu'on enlève une
+pelure, un constructeur, on se trouve sur quelque chose de plus petit,
+et on va forcément atteindre le bulbe, les valeurs atomiques, ce qui
+constitue la base de la récurrence sur les valeurs du type en
+question.
+
+On a 
+
+  Cocktail boisson * boisson
+
+mais boisson plus petite, peut être des coktails mais on se rapproche
+de la base. Puisqu'un cocktail a été bien construit, en partant
+d'atome et est fini puisqu'on nous le passe fini.
+
+Et toute valeur d'un tel type est de la forme du constructeur
+récursif. Quelque part au fond ça se fini avec un constructeur qui
+contient les valeurs de bases, et donc on s'arrête.
+
+Une donnée du type est soit de la forme du bulbe, soit de la forme du
+constructeur récursif. Un arbre binaire c'est un Noeud !! Noeud est le
+constructeur récursif des arbres binaires. C'est la seule chose dont
+on dispose pour construire des arbres. Donc de l'extérieur,
+sémantiquement, quand on voit Noeud(...) on doit penser, voir un arbre
+binaire, en fait un arbre binaire est sa racine (comme une liste est
+son premier élément), il devrait donc être représenté par sa racine
+qui est le premier noeud, mais comme on n'a pas de constructeur racine
+
+Au départ on n'a que les valeurs de bases. Et n'importe quelle autre
+donnée du type est obtenue par application successive du constructeur
+récursif sur ses valeurs de base. Pour construire une donnée, on part
+des valeurs de bases et on applique de manière répétée le
+constructeur. On déconstruira de manière inverse en enlevant de
+manière répété, par récursion, le constructeur qui apparait en premier
+Cocktail (Cocktail(...)) deviendra cocktail(...) on pèle la donnée
+(récursive) comme on le fait normalement dans toute fonction
+récursive.
+
+  type boisson = 
+  | Jus of string * int
+  | Sirop of string * int
+  | Alcool of string * int * int
+  | Cocktail of boisson * boisson
+
+Les boissons dont est composé un cocktail sont au départ des éléments
+de bases (Jus, Sirop, Alcool). Donc quelque soit le cocktail auquel on
+ait à faire, on retombera sur la base. Les type est bien construit,
+est un type récursif, construit de telle sorte à ce que ça fonctionne,
+ou plutot comme c'est un type récursif on a l'assurance que ça
+fonctionne.
+
+Si je vois 
+
+  Cocktail(b1, b2) 
+
+dans une fonction, je sais que j'atteindrais la base car Cocktail est
+un type récursif bien construit (si le concepteur à fait son boulot
+correctement). Donc je peux définir ma récurrence en l'applicant
+tranquillement sur les boissons b1 et b2 qui le compose.

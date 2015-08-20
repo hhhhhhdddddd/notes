@@ -1,0 +1,58 @@
+Objet et adresse
+^^^^^^^^^^^^^^^^
+Choses à retenir sur le cours
+1. deux sortes de variables
+a. celles qui contiennent une adresse
+b. les autres, celles qui contiennent directement une valeur.
+
+Un objet est une entité quelque part en mémoire, la variable contient
+l'adresse de ce quelque part, c'est le seul moyen d'accéder aux
+données et aux méthodes contenu dans l'objet.
+
+Lorsqu'on dit que la variable x est un objet, on devrait dire que la
+variable x contient l'adresse d'un objet, qu'elle contient l'adresse
+d'une zone mémoire contenant des données et des méthodes. Car un objet
+est une zone mémoire à laquelle le programmeur n'a pas accés
+directement, seulement par l'intermédiaire d'une adresse qui est
+contenu dans la variable.
+
+Sous-typage
+^^^^^^^^^^^
+Cm --- Sc1 --- Sc11
+       |
+       Sc2--- Ssc21
+              |
+              Ssc22
+
+Soit la déclaration : 
+
+  Cm o;
+
+la variable o accepte tout les sous-type (Sc1, Sc2, Sc11, Sc21,
+Sc22). C'est-à-dire qu'on pourra avoir par exemple :
+
+  o = new Sc21
+
+Dans une déclaration comme :
+  Cm o = new Sc21();
+Cm est le type déclaré et Sc21 est le type réel. De ses  sous-type on
+ne verra que les éléments (variable d'instance et méthodes déclarés
+dans C MAIS le code exécuté sera celuidu type réél.
+
+On peut voir les fonctionnalités classe mère comme encapsulées dans
+chacun des sous-types, c'est à cette partie encapsulée qu'on a
+accés. Le sous-typage filtre cette partie et évacue le reste.
+
+Cm
+| vi1; vi2;
+| m1(); m2(); m3();
+
+Si Sc1 défini en plus vi11, m11() et m12()
+
+Sc1
+| vi1; vi2;
+| m1(); m2(); m3();
+  | vi11;
+  | m11();m12
+
+On n'a accés qu'à la partie commune. Le premier étage.

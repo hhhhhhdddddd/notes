@@ -1,0 +1,31 @@
+On a un ensemble de valeur de base :
+
+  b1, b2, ..., bn
+
+On leur applique la fonction f qui va bien, on se retrouve va nous
+valeurs de base et en plus les résultat de l'application de f à ces valeurs :
+
+  b1, b2, ..., bn
+  f(b1), f(b2), ..., f(bn)
+
+Comme il s'agit d'une définition "par récurrence" ou plutot par
+itération (par application répétée d'une fonction). On leur applique f
+à nouveau à tout ce petit monde, on se retrouve va nous valeurs de
+base, et en plus les résultat de l'application de f à ces valeurs, et
+en plus les résultat de l'application de f àces valeurs :
+
+  b1, b2, ..., bn
+  f(b1), f(b2), ..., f(bn)
+  f(f(b1)), f(f(b2)), ..., f(f(bn))
+
+etc.
+
+  b1, b2, ..., bn 
+  f(b1), f(b2), ..., f(bn) 
+  f(f(b1)), f(f(b2)), ..., f(f(bn)) 
+  ...  
+  f(..(f(f(b1))..), f(..(f(f(b2))..), ..., f(..f(f(bn))..)
+
+etc.
+
+

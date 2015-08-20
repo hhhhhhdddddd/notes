@@ -1,0 +1,3 @@
+Une définition globale n'est pas une expression. Tout le reste est
+expression, donc a une valeur (et un type), un identificateur à une
+valeur, un "if" a une valeur, un "let..in" a une valeur, etc.

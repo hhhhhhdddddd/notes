@@ -1,0 +1,6 @@
+S'il existe un ordre bien fondé sur l'ensemble des données
+
+alors les arguments seront fini et bien construit
+
+construit de telle sorte que la récurrence ne pourra que marcher. 
+

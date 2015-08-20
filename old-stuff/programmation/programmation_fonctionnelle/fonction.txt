@@ -1,0 +1,24 @@
+Soit 
+
+  2 * 3 + 5
+
+c'est un entier. Mais 
+
+  2 * x + 5 
+
+ce n'est plus un entier, mais un entier en devenir. Une expression qui
+si on lui fournit une valeur pour x deviendra un entier. Il faut un
+moyen de lui passer cette valeur, on note alors
+
+  x -> 2 * x + 5
+
+ou encore
+
+  lambda x -> 2 * x + 5
+
+Appliquer une fonction à une valeur c'est fournir une valeur au
+argument, cette valeur est fournit en la plaçant derrière l'expression
+mise entre parenthèse
+
+  (lambda x -> 2 * x + 5) 3
+

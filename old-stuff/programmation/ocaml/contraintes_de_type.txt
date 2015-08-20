@@ -1,0 +1,14 @@
+let fonc1 (l:char list) : int =  List.length l;;
+
+let (fonc2 : char list->int) = function l ->  List.length l;;
+
+let fonc3 (l:char list) =  (List.length l : int);;
+
+let fonc4 = (function l -> List.length l : char list -> int);;
+
+
+
+
+
+
+

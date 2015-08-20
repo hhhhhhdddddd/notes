@@ -1,0 +1,25 @@
+Les trois petits points 
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+-- Comme aide à la conception --
+
+Lors de la conception (et ensuite de la trace) on utilise des points
+de suspension pour matérialiser la généralité du calcul en cours de
+définition, et essayer de voir le suivant en fonction du
+précédent. Par exemple
+
+  1 * 2 * ... * (n-1) * n
+
+nous permet de "voir" qu'on a 
+
+  (n-1)! * n
+
+c'est-à-dire que si l'on a le précendent (n-1)! le suivant s'obtient
+simplement en multipliant par n.
+
+-- Comme outil de traçage des fonctions --
+
+Lors de la trace, on part de n, on met quelque valeur des arguments
+suivant, puis on met trois petits point et la valeur de base. Ensuite,
+on place les valeurs précédents cette valeur. Cela permet d'avoir une
+idée de travail qu'effectue la fonction

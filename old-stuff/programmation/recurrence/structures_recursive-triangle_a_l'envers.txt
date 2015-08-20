@@ -1,0 +1,105 @@
+ANALOGIE DU TRIANGLE A L'ENVERS
+
+------------- <- Où on commence à peler
+ ----------- |
+  ---------  | à force de pelage on arrivera aux atomes 
+   -------   | (ce qui stoppera la récurrence)
+    -----    | 
+     ---     v 
+      -  <- atome qu'on finira par atteindre à force de pelage    
+
+On a bien  ------ > --- , le membre de droite est bien "plus grand"
+que celui de droite, c'est pour ça que le triangle à l'envers est une
+bonne analogie.
+
+1. Structure récursive = structure FINIE 
+2. et construite DE BAS EN HAUT 
+3. sur des BASES EXISTANTES, les expressions indécomposables, les
+   atomes. 
+
+On est sur de retomber sur les atomes quand on commence à peler la
+structure par le haut, par l'extérieur, comme pour un oignon, on pele
+à partir de l'extérieur et on tombe sur le bulbe.
+
+La récurrence est tout sauf un processus infinie, l'induction est
+infinie la récurrence est FINIE puisqu'elle travaille sur des
+structures de données FINIES et bien fondé et correctement construite.
+
+Les structures récursive sur lesquelles on travaille sont
+
+  FINIES et CORRECTEMENT CONSTRUITES DE BAS EN HAUT
+
+On atteindra la base.
+
+Les structures récursive sont bien fondée. Elles ne sont pas
+construites de haut en bas, ce qui pourrait faire croire qu'une
+descente à l'infini est potentiellement possible si la construction a
+été mal menée. 
+
+LES STRUCTURES RECURSIVE SONT CONSTRUITES DE BAS EN HAUT en partant
+des atomes, des valeurs indécomposables, ce qui constiturera la base
+de la récurrence sur les données en question.
+
+Les structures récursive son bien fondée et FINIES par
+construction. Puisqu'on par d'un argument qui nous est donné et qui
+est donc fini. Mais puisque cette arguement est une structure
+récursive il a été bien construit de bas en haut en partant des
+atomes, ce qui nous assure que l'on atteindra la base et que la
+fonction terminera.
+
+On a  
+
+  Cocktail boisson * boisson
+
+mais boisson plus petite, peut être des coktails mais on se rapproche
+de la base. Puisqu'un cocktail a été bien construit, en partant
+d'atome et est fini puisqu'on nous le passe fini (cf. Apprentissage de
+la programmation en Ocaml).
+
+Voir Wikstrom, p 160 ou 162, les expressions arithmétiques composé
+d'expression plus petites, jusqu'au atome.
+
+TRIANGLE
+^^^^^^^^
+
+ ---------  -------  -----  ---  -  vide
+  -------    -----    ---    -
+   -----      ---      -      
+    ---        -               
+     -
+
+La récurrence ça marche car on nous passe \/, c'est-à-dire un
+argument bien fondé, c'est-à-dire correctement construit par
+entassement successif (ou par agglomération successive) d'élément
+ordonnés, et ce, à partir d'élément atomique. La récurrence le tranche
+appel après appel, chaque "tranchage" produit un objet plus petit.
+
+C'est parce qu'on suppose que l'arguement est bien fondé qu'on peut
+supposer le résultat précédent lors de l'écriture de la fonction.
+
+L'expression est constuite à partir des atomes en remontant
+
+                           ---------
+                   -------  -------
+             -----  -----    -----
+        ---   ---    ---      ---
+vide  -  -     -      -        -
+
+
+S(S(S(S(S(S(0))))))
+  S(S(S(S(S(0)))))
+    S(S(S(S(0))))
+      S(S(S(0)))
+        S(S(0))
+          S(0)
+            0
+
+La récurrence tranche, la question est de savoir ce qu'on fait à
+chaque coup de couperet.
+
+
+
+
+Le structure récursive sont telle que ça marche, c'est comme ça grace
+à un ordre bien fondé sur l'ensemble des valeurs.
+

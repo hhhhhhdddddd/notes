@@ -1,0 +1,28 @@
+Déclarations
+^^^^^^^^^^^^
+
+Les déclations genre
+
+  int    x = 0        ;
+  char   c = 'a'      ; 
+  String s = "bonjour";
+
+se place dans des "let..in" (que ça soit vrai dans ce qui suit)
+
+  let    x = 0         in
+  char   c = 'a'       in
+  String s = "bonjour" in
+    corps de la fonction
+
+Retour de valeur
+^^^^^^^^^^^^^^^^
+
+Lorsqu'on programme dans un langage impératif (qui est le plus bête
+des esclaves) on doit tous lui préciser. On doit toujours le lui dire
+exactement quoi faire, comment le faire et quand le faire. On doit
+tout lui dire y compris quand retourner le résultat 
+
+En Ocaml, on donne une formule, il la calcul et retourne le résutat
+sans qu'on est rien à lui dire. (Presque) Tout est expression, les
+expressions ont des valeurs, ces valeurs sont systématiquement
+retournées après qu'une expression ait été évaluée.
