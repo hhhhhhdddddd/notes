@@ -1,0 +1,39 @@
+# Principe de développement
+
+Initialiser une fois à un endroit et ça se débrouille
+Le général appel le particulier
+Pas de duplication
+
+Initialiser une fois à un endroit et ça se débrouille
+- Initialiser une fois à un endroit : pour faciliter la vie de l'intervenant, ne pas avoir à partir à la pêche
+- et ça se débrouille : pour disposer de module réutilisable
+
+Le général appel le particulier
+Pour faciliter la vie de l'intervenant, évite d'avoir à partir à la pêche en cas de modification
+
+Pas de duplication
+Pour faciliter la vie de l'intervenant, évite d'avoir à partir à la pêche en cas de modification
+
+# But
+
+Faire grossir de l'information exécutable sous forme de texte jusqu'à ce que le système décrit propose, quand on l'exécute, toutes les fonctionnalités demandées.
+
+/!\ Etre compris du plus grand nombre.
+
+# Remarques 1
+
+On part de la demande d'un système proposant des fonctionnalités spécifiques, décritent sous forme "littéraire" par un ensemble de spécifications. Description littéraire qu'il convient de transformer en description sous forme d'information exécutable.
+
+Au départ la description sous forme d'information exécutable du système est inexistante. Le but est d'ajouter par étapes successives de l'information exécutable de manière à ce que les systèmes décris par ces ajouts successifs convergent vers le système décrit sous forme littéraire.
+
+Au niveau de granularité la plus grosse, une étape correspond à l'intégration d'une fonctionnalité complète. Une fonctionnalité est caractérisée par une quantité d'information exécutable qui la réalise lors de l'exécution du système (quantité qui peut être plus ou moins importante). Au niveau de granularité la plus fine, une étape correspond à l'ajout d'information exécutable (produisant un effet ou non, en effet, il peut s'agit de rendre l'information existante plus intelligible) participant à la réalisation d'une fonctionnalité (et faisant tendre la nécessité d'ajouter de l'information pour réaliser la fonctionnalité vers zéro).
+
+Un ajout d'information à un instant t doit être effectué de manière à ce qu'il ne détériore pas la lisibilité du système telle qu'elle était à l'instant t-1. Un ajout d'information peut soit participer à la réalisation d'une fonctionnalité, soit améliorer le lisibilité du système sans en augmenter les fonctionnalités (il augmente sa lisibilité).
+
+# Remarques 2
+
+On ne raconte pas des histoires, on décrit des raisonnements permettant de résoudre des problèmes. Le probléme étant qu'il y a autant de solutions que de personnes car on ne modélise pas les choses de la même manière. Souvent les solutions paraîssent simple, évidente à ceux qui les produisent et la solution produite par quelqu'un d'autre paraît plus compliqué d'un part car il faut s'approprié le modèle qui y a conduit, il faut "se mettre dans la peau" de celui qui l'a produit, c'est la difficulté du métier. Une solution simple n'est pas forcément une solution qui utilise un nombre minimal de concepts et/ou d'étapes (critère que certain utilise pour juger de l'élégance d'une solution). Le but n'est pas d'être élégant mais d'être compris du plus grand nombre. Il faut éviter de ne pas commenter une solutions car on la trouve "évidentes" alors qu'elle ne l'est pas forcément comme on le voit parfois dans les livres de maths, "démonstration laissé au lecteur car évidente". Du code non commenté dit "compréhension de ce bout de code laissée au lecteur car évidente", la difficulté est de déterminer ce qui est évident de ce qui ne l'est pas, encore une fois il faut être compris du plus grand nombre (le problème est du code est produit dans un environnement de gens brillant, le lecteur moyen aura du mal à le comprendre, inversement, du code écrit dans un environnement de gens médiocre ne sera pas forcément plus simple, il risque d'être pourri de l'intérieur...)
+
+# Bug
+
+La source d'un bug se trouve souvent dans une information mal organisé, mal explicité, mal comprise au départ et donc mal codée, ou codée à la va vite sans soucis de lisibilité et d'obscurisation en obscurisation on a un bug.

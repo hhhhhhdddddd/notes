@@ -1,0 +1,138 @@
+# La base (une société de réseau vs hierachie)
+
+On a un problème à résoudre. Ce problème est exprimé en terme d'entités qu'on représente par des objets, les objets du domaine. Ce sont ces objets qui collaborent pour résoudre le problème.
+
+Pour paraphraser Boileau : "Un système bien conçut s'énonce clairement, Et les mots pour le décrire (ou le modifier) arrivent aisément."
+
+# Tout est dans le nommage
+
+On choisit un nom qui dénote ce qu'on veut faire et on lui associe un algorithme qui le réalise (et qui ne doit pas faire autre chose).
+
+Tout est dans les noms (le nommage)
+- des objets du domaine, et ce, pour pouvoir décrire clairement à quelqu'un leur collaboration en vue de résoudre le problème
+- des objects architecturaux qui les aident (helper), et ce, toujours pour pouvoir décrire clairement les choses.
+
+# Conception
+
+## 1
+
+La conception c'est l'introduction de nouveaux noms. Introduction des noms visant à expliquer clairement ce qui se passe : qui sont les acteurs ? Comment collaborent-ils pour résoudre le problème ? Si l'explication est embrouillé c'est qu'il y a un problème de conception, c'est que les noms et/ou les concepts associés sont mal choisis.
+
+## 2
+
+De quelles notions a-t-on besoin pour expliquer ce que fait l'application ? Elle résoud un problème énoncé quelque part, donc d'abord présenter le problème qu'elle résoud et utilisé les notions du problèmes en tant qu'objets collaborant pour le résoudre.
+
+## 3
+
+On commence avec les objets strictement nécessaire et ensuite on en ajoute si c'est vraiment nécessaire, et ce, car plus il y a d'objets plus le système devient difficile à comprendre donc plus ça complique la maintenance.
+
+# La relation client-serveur (une société de service vs maître-esclave)
+
+La relation client-serveur est décrite par la relation d'utilisation. Un client doit mettre son serveur en état de le servir. Un serveur ne doit rien connaître de son client ni du contexte d'exécution. Sinon le serveur ne peut servir qu'un maître, on est alors dans une relation maître esclave alors qu'on veut vivre dans une société (libre) de services où un serveur peut servir tout client qui l'a mis en état.
+
+# Réutilisation
+
+Un bon exemple est un système client/serveur. On peut vouloir réutiliser dans un second client (pour proposer des fonctionnalités annexes, par exemple dans un client mobile) le code qui a été écrit pour le premier client (permettant d'utiliser le noyau du système, par exemple un ordinateur de bureau).
+
+Le code sera réutilisé dans un contexte différent, on doit donc veiller lors de l'écriture du code pour le premier client à ce que ce code n'est pas de dépendances au contexte. Il ne faut pas faire d'hypothèse sur le contexte d'exécution (en particulier sous la forme de variables globales). Si on a besoin de quelque chose, on le passe à l'initialisation, ce qui fera naître des besoins d'objets qu'il faudra coder plutôt que de prendre des raccourcis comme des variables globales.
+
+# Ajouter une fonctionnalité
+
+Ce n'est pas ajouté un nouveau fichier et y mettre tout ce qui concerne cette fonctionnalité, ce qui constitue une très mauvaise interprétation de l'orthogonalité, et qui produit l'effet inverse, créant des dépendances avec ce nouveau fichier
+
+Il s'agit d'ajouter des comportements aux objets existants ce qui aura pour effet d'augmenter les réalisations possible de leur collaboration, et en particulier d'y inclure la nouvelle fonctionnalité. On ajoutera de nouveaux objets (de nouveaux fichiers) seulement si c'est nécessaire, si l'augmentation des réalisations de la collaboration ne peut se faire qu'avec de nouveaux "acteurs", si les comportements nécessaires ne peuvent pas s'intégrer dans les objets existants sans faire perdre l'intelligibilité du système. On peut ajouter de nouveau objet pour assister les objets augmenté et clarifier la collaboration elle aussi augmentée (du fait de l'augmentation des capacités de ses participants).
+
+L'intégration de nouveau comportement réalise l'orhogonalité car les nouveaux comportements ne sont a priori pas utilisé par l'existant donc l'existant n'en dépend pas, ils constituent une couche qui vient s'ajouter (et qui peut se retirer)
+
+ +---+  +---+     +---+
+ |   |  |   |     |   |
+-|---|--|---|--+  |   |
+ +---+  +---+  |  |   |
+               +--|---|- <- nouvelle fonctionnalité = nouveau comportement, nouvelle couche (ou strate) ajouté transversalement dans les objets existants.
+                  +---+  
+
+La nouvelle couche peut dépendre de ce qu'il y a "au-dessus" mais ce qu'il y a au-dessus ne doit pas (ou alors au minimum) dépendre de la nouvelle couche, c'est l'orthogonalité. Il y a des dépendance entre les méthodes des différents objets de la nouvelle couche, c'est ce qui augmente les possibilité de réalisation de leur collaboration.
+
+             | <- et surtout pas l'ajout d'un nouveau fichier la contenant
++---+  +---+ | +---+
+|   |  |   | | |   | 
+|   |  |   | | |   |
++---+  +---+ | +---+
+
+Cela créer des dépendance entre l'existant et l'ajout
+
+# Ne pas casser l'encapsulation
+
+Ne pas casser l'encapsulation avec des méthodes suisJeTelType() suisJeDeTelAutreType() qui expose la tripaille de la "classe". L'objet connait ces choses là, il est donc préférable d'utiliser un if dans le fichier de l'objet.
+
+# Types : enum vs booléens
+
+enum quand c'est exclusif ! Booléens si ça peut être composé.
+
+# Paramètres par défaut
+
+Soit géré dans getParameterValue() et pas plus ou moins explicitement dans chaque fonction utilisant un paramètre.
+
+WP.counter.getParameterValue = function( parameterName ) {
+    var defaults = {
+        format : ".2"
+    };
+
+    if ( ! this.jsonData[ parameterName ] ) {
+        return defaults[ parameterName ];
+    }
+    else {
+        return this.jsonData[ parameterName ];
+    }
+};
+
+Soit géré via un json par défaut
+
+# Les principaux composants
+
+Pour résoudre le problème le système fait collaborer les objets du domaine qui constituent le "modèle".
+Pour que le système puisse communiquer avec l'extérieur on l'équipe d'un "composant" spécial, l'interface externe.
+Pour que le système puissent stocker et récupérer ses données on l'équipe d'un "composant" spécial, la gestion des données.
+
+Le système 
+- fait collaborer les objets du "domaine" (extraits du problème) pour résoudre ce dernier
+- utilise le composant "interface utilisateur" pour montrer l'état du modèle à l'utilisateur et récupèrer les données de sa part
+- stocke et récupère les données dans le composant "gestion des données"
+
+On a trois composants : domaine (ou modèle), interface utilisateur et gestion des données.
+
+# Généralités sur les objets
+
+Si l'étudiant qu'il représente déménage, on instruit l'objet de changer d'adresse. L'objet n'est pas ce qu'il représente, c'est une entité logiciel qu'on doit diriger.
+
+# Modif modèle
+
+Ne pas avoir accés directement en écritujre aux opbjet du modèle.
+J'ai fini mes modif je met à jour le modèle.
+Travailler sur une copie et mettre à jour le modèle ensuite.
+
+# Développement
+
+Créer les bonnes notions et bien les nommer. Utilisation concrète : les onglets pour identifier (via les noms de fichiers et donc de notions) les outils nécessaire à une modification en cours.
+
+# Lisibilité
+
+Le texte d'une fonction doit suffire à la comprendre. Si on doit se référer à un autre bout de code pour la comprendre, la moindre des choses est que ce code se trouve à proximité, et ce, pour ne pas avoir à faire des aller-retour.
+
+Une fonction doit pouvoir être comprise sans avoir besoin de se référer
+
+# Algo, structures de données et structure des problèmes
+
+Résoudre le problème des 8 reines c'est parcourir un arbre, l'arbre des états. Quand on sait ça on sait que la solution est récursive avec retour arrière, un parcours en profondeur.
+
+# Noyau
+
+Ne pas encombrer le noyau avec des éléments des satellites.
+
+# Maintenance
+
+Maintenir du code c'est lire du code pour essayer de le comprendre. Ecrire du code maintenable c'est faire en sorte de facilité cette lecture du code proprement dit et des commits.
+
+Eviter les faux amis. Les choses qui ont l'air d'être ce qu'elles ne sont pas.
+Eviter de faire la même chose de plusieurs manière.
+Centraliser au maximum.

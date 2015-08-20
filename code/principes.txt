@@ -1,0 +1,21 @@
+# PAS DE DUPLICATION
+
+# Société de réseaux (et pas seulement hierarchique) où les objets collaborent pour arriver à un but.
+
+# Société de service et pas relation maître esclave (de l'appelant, du contexte ou de tout autre chose)
+
+Un client doit mettre son serveur en état de le servir
+
+Un serveur ne doit rien connaître de son client ni du contexte d'exécution. Sinon le serveur ne peut servir qu'un maître, on est alors dans une relation maître esclave alors qu'on veut vivre dans une société (libre) de services où un serveur peut servir tout client qui l'a mis en état.
+
+Initialiser une fois à un endroit et ça se débrouille
+
+# Le général appel le particulier
+
+# Mieux vaut une question stupide que du code stupide (à moins que ça soit du code KISS)
+
+# Objets du domaine
+
+Le problème à résoudre est le domaine. On en détermine les entités qui le constituent dont on fait des objets, les objets du domaine. Puis on fait collaborer ces objets pour que cette collaboration aboutisse à une solution du problème.
+
+Toute les spécifications sont des problèmes qu'on doit traiter de la sorte (export, compteur, etc.)

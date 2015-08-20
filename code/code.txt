@@ -1,0 +1,69 @@
+Dans la série "j'aime me raconter des histoires".
+
+# Décort
+
+Les deux problèmes fondamentaux, les deux caractéristiques auxquels on est confronté lorsqu'on construit des systèmes logiciels sont :
+- leur complexité
+- le fait qu'ils soient changeant par nature, qu'ils évoluent au cours de leur vie, qu'il faillent intervenir constament dessus
+
+En ayant conscience du premier point il faut facilité au maximum l'aspect intervention du second.
+
+Pour faire face à ces deux caractèristiques on utilise l'abstraction et la composition.
+
+L'informatique est la science de l'abstraction -- créer le bon modèle pour un problème et mettre au point les techniques mécanisables appropriées pour le résoudre. ITPAOODUJ-1
+
+# Objectif
+
+Composer (à tout niveau) un nombre raisonnable d'abstraction (de notions) s'articulant de manière sensées, et ce, pour qu'il soit facile de se réapproprier le contexte d'intervention, lorsque l'inévitable modification aura lieu.
+
+On semble être dans l'arbitraire avec des mots valises tel que raisonnable et sensé. Cela signifie simplement qu'il faut que ça soit facile à expliquer sans que les "Heu... Pourquoi c'est comme ça déjà ?" durent trop longtemps. La qualité d'un logiciel est inversement proportionnelle au temps des "Heu..." (et au nombre de WTF).
+
+Un logiciel est quelque chose de complexe (au même titre que tout système produit par des ingénieurs : voitures, avions, etc.) Comme toute chose complexe, il faut le rendre facile à appréhender, faire qu'il soit facile d'intervenir dessus (évolution, correction, etc.). Deux outils principaux pour le concevoir et l'appréhender : décomposition et abstraction.
+
+Tout doit être considéré comme un outil pour permettre de facilité les interventions sur le système puisque c'est la caractéristique principal d'un système : devoir intervenir dessus. Le temps écoulé entre deux intervention fait qu'on intervient à chaque fois sur un système dont on ne se souvient plus, il est donc important de pouvoir se replonger dedans facilement en limitant les nombres d'abstractions a devoir maîtriser pour le comprendre, en limitant la dispertion des traitements ou des données qui oblige à connaître le système intimement afin de pouvoir intervenir sur des tels dispertions, etc.
+
+Pourquoi les gens promeuvent l'utilisation de tel ou tel "paradigme", l'écriture de système que l'air du temps qualifie de SOLID, l'utilisation de patrons de conception, ou autre technique ? Car ils considèrent que ce sont des moyens pour atteindre l'objectif d'un système facile à appréhender pour intervenir dessus ! Ce n'est pas pour se faire plaisir intellectuellement.
+
+# Personnages principaux
+
+- Modéliser :  décrire le problème en des termes adéquatement abstraits (en se situant pour chaque terme au bon niveau d'abstraction).
+- Système : ce qu'on cherche à comprendre ou à concevoir. Un tout qu'on peut appréhender indépendamment de son contexte (cf. les systèmes du corps humains).
+- Complexité : autre nom pour l'inconnu, autrement dit qualificatif qu'on pourrait appliquer à tout ce qu'on cherche à comprendre.
+- Décomposition : principal outil intellectuel dont dispose l'humain pour essayer de comprendre quelque chose.
+- Abstrastion : outil intellectuel intervenant après la décomposition.
+- Nom : 
+
+ 
+Point commun : la volonté de comprendre.
+
+Résumé de l'histoire : "pour comprendre, pour lutter contre la complexité : décomposition et abstraction".
+
+# Décomposition
+
+Décomposer (ou analyser) c'est diviser (ou partitionner) un système en éléments plus petits, moins complexes que le système dans son entièreté. Le éléments résultats d'une décomposition sont appelés des composants ou des modules.
+
+# Abstraction
+
+
+
+Après avoir décomposé un élément on peut n'en garder que ce qui est pertinent, c'est-à-dire produire une abstraction de cet élément. En effet, abstraire c'est supprimer ce qui n'est pas nécessaire à la compréhension. La décomposition précède l'abstraction, il faut connaître les composants pour pouvoir déterminer ce qui sont susceptibles d'être pertinants et supprimer les autres.
+
+# Modularité et modularité (ou encore composant et composant).
+
+Un module comme résultat d'une décomposition pour comprendre un système.
+Un module comme un élément logiciel réutilisable.
+
+# Réutilisation
+
+Initialiser une fois, complètement. Passer tout les paramètres nécessaire à une telle initialisation. Pas d'initialisation par phase qui contraingne à effectuer une série d'appels à des fonctions d'initilisation avant de pouvoir utiliser le composant. En effet, une telle contrainte fragilise le logiciel, si un appel est oublié le logiciel est cassé.
+
+# Outils pour rendre facile à appréhender
+
+Une chose à un endroit, ou plutôt tout ce qui concerne une notion à un seul endroit, se décline entre autre sous ces formes :
+- SRP
+- DRY
+- Conception objet
+
+# Analogie
+
+Regarder le code c'est ouvrir le capot et regarder les documents de conception c'est regarder le plan. Or, dans le logiciel les deux divergent rapidement et sans avertissement. On ne change pas les moteurs d'un moteur de voiture sur une ligne d'assemblage aussi facilement qu'on peut pourrir du code sans que ça se voit au premier abord.

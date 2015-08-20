@@ -1,0 +1,1 @@
+Dépendance. La désignation de quelque chose qui n'est pas dans le module. Le plus souvent il s'agira de l'identificateur d'un autre module ou d'une de ses instances mais il peut aussi s'agir d'une valeur littéral du type String désignant un concept associé à un autre module (par exemple une classe CSS).

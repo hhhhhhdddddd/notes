@@ -1,0 +1,1 @@
+Imaginer les HTML généré par un truc distant, par exemple en JS et envoyer via Ajax.

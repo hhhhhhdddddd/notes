@@ -1,0 +1,25 @@
+# Principales caractéristiques
+
+Une plus ou moins grande complexité. Un système informatique étant de l'information organisées de manière plus ou moins complexe pour proposer une solution à un problème lui-même plus ou moins complexe.
+
+Nécessite des interventions constantes (pour le faire évoluer ou le corriger). L'intervenant type devant être considéré comme étant une personne devant intervenir sans autres informations que celles fournies par le systèmes lui-même (ses modules et leur organisation) et la documentation qui l'accompagne.
+
+Tout étant permi, solutions compliqué pour un problème simple et solution simple pour un problème en apparence compliqué, il faut garder en tête qu'on doit faciliter la tâche de l'intervenant vierge d'information a priori. C'est pour lui qu'on écrit. Lui qui est nous dans peu de temps.
+
+# Tout commence quand un intervenant doit effectuer une modification. Qu'a-t-il envie de trouver ?
+
+Un système informatique est la solution a un problème, ou plutôt à l'ensemble de problèmes que constituent les fonctionnalités qu'il doit proposer (les demandes du client). Un sous-ensemble d'entre elles sont indispensable, c'est le noyau du système (le reste constituent des fonctionnalités annexes).
+
+Le problème doit être décomposé (modélisation) en ses principaux éléments (modules) qu'on doit organiser en un système dont l'exécution fourni une solution du problème.
+
+Un tel système, une telle solution doit être facilement compréhensible par toute personne devant intervenir dessus pour le modifier.
+
+L'incompréhension peut venir d'un trop grand nombre de module (on va trop loin dans la décomposition du problème, on "atomise" sa complexité) ou d'un nombre insuffisant de module (on ne décompose pas assez le problème, chaque module intègre trop de complexité). Que l'excès soit dans le microscopique ou le macroscopique dans les deux cas les interactions entre les modules sont incompréhensible. Trop d'interactions entre trop de modules d'un côtés, de trop gros module qui proposent trop d'interaction les uns avec les autres.
+
+L'intervenant peut espérer que la décomposition fasse intervenir un nombre raisonnable de module et qu'on puisse toujours se placer dans le système au niveau d'abstraction adéquate pour effectuer simplement la modification demandée (sans avoir à se soucier de détails dont on ne devrait pas avoir à ce soucier).
+
+# Réutilisation
+
+Un bon exemple est un système client/serveur. On peut vouloir réutiliser dans un second client (pour proposer des fonctionnalités annexes, par exemple dans un client mobile) le code qui a été écrit pour le premier client (permettant d'utiliser le noyau du système, par exemple un ordinateur de bureau).
+
+Le code sera réutilisé dans un contexte différent, on doit donc veiller lors de l'écriture du code pour le premier client à ce que ce code n'est pas de dépendances au contexte. Il ne faut pas faire d'hypothèse sur le contexte d'exécution (en particulier sous la forme de variables globales). Si on a besoin de quelque chose, on le passe à l'initialisation, ce qui fera naître des besoins d'objets qu'il faudra coder plutôt que de prendre des raccourcis comme des variables globales.
