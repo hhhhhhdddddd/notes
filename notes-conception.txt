@@ -2,6 +2,11 @@
 Tout (langage, code, etc.) penser dans un cadre problème/solution. Si quelque chose n'est pas la solution d'un problème identifié, commencer par ne pas l'utilisier.
 
 ---
+Un programme ça se lit pour se comprendre ou pour se comprendre ça se lit.
+Un programme c'est un texte.
+Ou plutôt un ensemble de texte (programme proprement dit, description du programme --- ie documentation, etc.) qui se lisent à plusieurs niveaux.
+
+---
 D'abord et avant tout : que ça soit maintenable
 
 ---
