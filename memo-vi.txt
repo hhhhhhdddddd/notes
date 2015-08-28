@@ -1,16 +1,17 @@
-===============================================================================
+Le "vrai" curseur est la partie droite du rectangle.
 
-Presentation des commandes plus ou moins selon la necessite avec laquelle elle
-se sont presentees.
+# Déplacement et insertion dans une ligne
 
-Se deplacer dans la ligne: 0 ^ g_ $
-Insertion dans la ligne:   I i a  A      
+Se deplacer dans la ligne: 0 (ou ^)  $ (ou g_)
+Insertion dans la ligne:   I i a  A
 
-    NB: I=devant le premier caractere alphanum; i=a gauche du curseur; 
-        a=a droite du curseur; A=a droite du dernier caractere
+NB
+- I : deplace le curseur en debut de ligne et insère, autrement dit : insere devant le premier caractere alphanum
+- i : a gauche du curseur
+- a : deplace le curseur d'un caractere a droite et insere, autrement dit : a droite du curseur
+- A : deplace le a droite du dernier caractere
 
-    NB: i="inserer entre", i.e. devant qqch ; 
-        a="append a la fin", mnemo: end.
+# Sélectionner, copier, coller, sauvegarder
 
 Selectionner des caracteres: ctrl+v
 Selectionner des lignes: shift+v
@@ -22,21 +23,32 @@ Coller: p
 Coller le presse papier: "+p
 Sauvegarder: :w
 
-    NB: "<buf><cmd>=le buffer <buf> sera l'argument de la commande <cmd> 
+NB
+- "<buf><cmd> : le buffer <buf> sera l'argument de la commande <cmd> 
+- + est un buffer, c'est le presse papier
+
+# Déplacements
+
+  hjkl (<^v>)
 
 Avancer le curseur: l w e  W  E ) } f<car>  
 Reculer le curseur: h b ge gE B ( { t<car>
 
-    NB: l=car; w=debut word, e=fin word, W=debut WORD, E=fin WORD,
-        f<car>=jusqu'au car <car>
-
-    NB: les parentheses delimite une expression, donc : ligne
-        les accolades delimitent des blocs, donc : paragraphe
+NB: 
+- l : car
+- w : debut word
+- e : fin word
+- W : debut WORD
+- E : fin WORD
+- f<car> : jusqu'au car <car>
+- comme en C, les parentheses delimite une expression, donc : ligne
+- comme en C, les accolades delimitent des blocs, donc : paragraphe
 
 Avancer la fenetre: j ^e ^d ^f G
 Reculer la fenetre: k ^y ^u ^b gg
 
-    NB: Avancer (resp. reculer) la fenetre dans le fichier.
+NB
+Avancer (resp. reculer) la fenetre dans le fichier.
 
 Placer le curseur dans l'ecran: HLM (haut, milieu, bas)
 La ligne dans la fenetre: zt zz zb (top, milieu, bas)
@@ -361,13 +373,13 @@ Notes
 
 " 
 
-"indique a vi qu'on souhaite utiliser le buffer qui suit ". "a se lit donc
-"utiliser le buffer a pour...". Par exemple
-- "add si lit "utiliser le buffer a pour y mettre la ligne courante"
+"indique a vi qu'on souhaite utiliser le buffer qui suit ". "x se lit donc
+"utiliser le buffer x pour...". Par exemple
+- "xdd si lit "utiliser le buffer x pour y mettre la ligne courante"
 
 +
  
-+ est le registre qui correspond a presse papier. "+ se lit donc "utiliser le
++ est le registre qui correspond au presse papier. "+ se lit donc "utiliser le
 presse papier..."
 
 Buffer
