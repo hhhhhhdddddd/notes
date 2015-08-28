@@ -1,0 +1,412 @@
+===============================================================================
+
+Presentation des commandes plus ou moins selon la necessite avec laquelle elle
+se sont presentees.
+
+Se deplacer dans la ligne: 0 ^ g_ $
+Insertion dans la ligne:   I i a  A      
+
+    NB: I=devant le premier caractere alphanum; i=a gauche du curseur; 
+        a=a droite du curseur; A=a droite du dernier caractere
+
+    NB: i="inserer entre", i.e. devant qqch ; 
+        a="append a la fin", mnemo: end.
+
+Selectionner des caracteres: ctrl+v
+Selectionner des lignes: shift+v
+Formatter sur 80 colonnes: gq
+Copier: y
+Copier dans le presse papier: "+y
+Couper: x
+Coller: p
+Coller le presse papier: "+p
+Sauvegarder: :w
+
+    NB: "<buf><cmd>=le buffer <buf> sera l'argument de la commande <cmd> 
+
+Avancer le curseur: l w e  W  E ) } f<car>  
+Reculer le curseur: h b ge gE B ( { t<car>
+
+    NB: l=car; w=debut word, e=fin word, W=debut WORD, E=fin WORD,
+        f<car>=jusqu'au car <car>
+
+    NB: les parentheses delimite une expression, donc : ligne
+        les accolades delimitent des blocs, donc : paragraphe
+
+Avancer la fenetre: j ^e ^d ^f G
+Reculer la fenetre: k ^y ^u ^b gg
+
+    NB: Avancer (resp. reculer) la fenetre dans le fichier.
+
+Placer le curseur dans l'ecran: HLM (haut, milieu, bas)
+La ligne dans la fenetre: zt zz zb (top, milieu, bas)
+
+Creer un dossier: :call mkdir($HOME . "/tmp/foo/bar", "p", 0700)
+Ouvrir un fichier: :hide edit foo.txt
+
+Auto completion
+
+ctrl-x Ctrl-p  complete ce mot avec les mots precedent
+Ctrl-x Ctrl-n  complete ce mot avec les mots suivant
+
+===============================================================================
+
+ACTIONS COURANTES AVEC VIM
+
+------------------------------------------------------------------------------- 
+Auto completion
+
+ctrl-x Ctrl-p  complete ce mot avec les mots precedent
+Ctrl-x Ctrl-n  complete ce mot avec les mots suivant
+
+------------------------------------------------------------------------------- 
+Commenter une region (AUSSI INDENTER) (CF. mATLOFF)
+
+1. ctrl-v la 1ere colonne des lignes a commenter
+2. I (passe en insertion au debut de la region selectionnee)
+3. taper le/les caractere(s) de commentaire 
+4. Esc
+
+Pour indenter il suffit de taper des espaces. On peut aussi utiliser
+
+  >> (apres reglage du niveau d'intentation)
+
+------------------------------------------------------------------------------- 
+Ajouter un nouveau fichier a la liste des fichiers ouverts
+
+  :arge  pour l'editer directement
+  :arga  pour l'ajouter et rester dans le fichier courant
+
+------------------------------------------------------------------------------- 
+Passer d'un fichier ouvert a l'autre
+
+  :n    passer au fichier suivant
+  :prev passer au fichier precedent
+
+------------------------------------------------------------------------------- 
+Explorer des fichiers
+
+  :Explore  
+  :Sexplore 
+  :edit .
+
+------------------------------------------------------------------------------- 
+Ouvrir plusieurs fichiers simultanement
+
+  $vim fichier1 fichier2 ... fichiern
+
+------------------------------------------------------------------------------- 
+Copier/coller depuis le presse papier de l'os
+
+  "+y  copier
+  "+p  coller
+
+-------------------------------------------------------------------------------
+Sauvegarder une session de travail
+
+  :mksession! ~/today.ses  pour sauvegarder
+  vim -S ~/today.ses       pour ouvrir
+
+------------------------------------------------------------------------------- 
+Chercher des caractere accentues
+
+  /CTRL-K <le digraph correspondant au caractere>
+
+Exemple: recherche de <e accent aigu>
+
+  /CTRL-K e'
+
+Les caracteres accentues sont des digraphs. Pour avoir la liste des
+digraphs, utiliser
+
+  :dig[raph] 
+
+On peut aussi entrer un digraphe en utilisant sa valeur decimale comme suit
+
+  ^Vnnn (avec 000 <= nnn <= 255)
+
+Principaux digraph
+
+a> â  226    a: ä  228    c, ç  231
+e! è  232    e' é  233    e> ê  234    e: ë  235   
+i> î  238    i: ï  239    
+o> ô  244    o: ö  246    u! ù  249
+u> û  251    u: ü  252    
+
+------------------------------------------------------------------------------- 
+Rechercher/remplacer
+
+: [address] s/<pattern>/<string>/[g|c|N] (where N is an integer value).
+
+ 
+g = Global:    Replace all occurances of <pattern> on the line.
+c = Cond.      Ask before making each replacement.
+N = Nth    Replace only the Nth occurance of <pattern> on the line.
+(No modifier implies N=1, the first occurance on that line)
+
+[address values]    -May be one specifier or two seperated by a comma.  (below,  x represents an integer).
+. = The current line
+$ = The last line in the file
+% = Entire file
+x = The xth line of the file
++x = x lines after the current line
+-x = x lines before the current line 
+
+------------------------------------------------------------------------------- 
+Latex
+
+Les rules sont dans .texrc
+
+Compiler vers pdf : g:Tex_CompileRule_pdf
+
+Compiler          : \ll
+Voir              :\lv
+  
+
+================================================================================
+En ascii les majuscules viennent avant les minuscules
+u annule la derniere commande
+p copie a gauche du curseur ou sous la ligne courante
+
+------------------------------------------------------------------------------- 
+Les quatres directions
+
+hjkl : h est a gauche, j tire vers le bas, k tire vers le haut, l est a droite
+
+------------------------------------------------------------------------------- 
+Deplacement par bloc
+
+
+    --> | w  e     w  E     )        }          fc       
+        | word     WORD     phrase   paragraphe caractere
+    <-- | b  ge    B  gE    (        {          tc      
+
+------------------------------------------------------------------------------- 
+Deplacement/insertion sur une ligne
+
+
+    |    ceci est une# ligne de texte.      | (# = curseur)
+    +---------------------------------------+ 
+     0   ^           #               g_    $| Deplacement
+         I          i#a                    A| Insertion
+
+------------------------------------------------------------------------------- 
+Deplacement curseur/ligne/ecran 
+
+    
+    Le curseur   La ligne   L'ecran               
+     
+    gg (bof)                ctrl-b    
+    +----        +----      +-----     
+    |H           |zt        |         ctrl-u  
+    |            |          |         +-----    ctrl-y   
+    |            |          |         |         +----  
+    +M           +zz        +         |         1      
+    |            |          |         |         +----       
+    |            |          |         +----     ctrl-e
+    |L           |zb        |         ctrl-d 
+    +----        +-----     +------
+    G (eof)                ctrl-f
+                            
+------------------------------------------------------------------------------- 
+Commandes 
+
+Ctrl-x Ctrl-n  complete ce mot avec les mots suivant
+Ctrl-x Ctrl-p  complete ce mot avec les mots precedent
+
+d  couper
+y  copier
+p  coller (colle a droite du curseur ou sous cette ligne)
+
+dd  couper la ligne courante
+yy  copier la ligne courante
+
+Note: " indique a vi qu'on souhaite utiliser le buffer qui suit "
+
+"xd  coupe  dans le registre x (x = une lettre de l'alphabet en minuscule)
+"xy  coupie dans le registre x
+"xp  colle  le contenu du registre x
+
+ma marque la courante position et la nomme a
+
+h, j, k, l, (w, e), (b, ge), (W, E), (B, gE), (g_, $), (0, ^), G, gg, 'a, 
+             ->      <-       ->      <-      ->       <-      ^  v 
+
+nG  aller a la ligne numero n
+`a  aller a la marque a
+'a  aller a la ligne sur laquelle se trouve la marque a
+`.  aller a la derniere ligne editee
+%   aller au symbole ouvrant ou fermant correspondant
+*   aller a la prochaine occurence du mot (entier) sous le curseur
+#   aller a la precedente occurence du mot (entier) sous le curseur
+H   aller en haut de l'ecran
+M   aller au milieu de l'ecran
+L   aller en bas de l'ecran
+gg  aller au debut du fichier
+G   aller a la fin du fichier
+
+d{m} coupe a partir du curseur la zone indiquee par {m} ({m}= un mouvement)
+x    coupe ce caractere
+da>  coupe une balise (i et a sont des text-object motions, apres d ou c)
+di>  coupe l'interieur d'une balise
+
+Note: pour passer en mode insertion apres avoir coupe, taper c au lieu de d
+      devant {m}
+
+c{m}  suppression/insertion de la zone designee par {m} a partir du curseur
+s     suppression/insertion de ce caractere
+
+Note: change, c-a-d ne passe pas en mode insertion
+
+r  change ce caractere (ou xi)
+~  change la casse de ce caractere
+
+v       selectionne a partir du curseur (selection par caractere)
+V       selectionne cette ligne (selection par ligne)
+crtl-v  selectionne un bloc
+gv     recuperer la precedente sélection perdu 
+
+fc rechercher en avant le caractere c (t en arriere)
+/x recherche x
+
+. repete la derniere commande
+u annule la derniere commande
+
+Vgq  justification decoupe en lignes de 80 caracteres maximum
+:ce  justification ce(ntrer) le texte selectionne
+:ri  justification à droite (right) le texte selectionne
+:le  justification a gauche (left) le texte sélectionne
+
+J  joins cette ligne et la suivante
+xp    echange se caractere et le suivant
+
+ddp   echanger cette ligne et la suivante
+ddkP  echange cette ligne et la precedente
+dawwP echange ce mot et le suivant
+dawbP echange ce mot et le precedent
+
+<C-o>     Permet, dans le mode insertion, d'exécuter une commande du mode normal
+    (par exemple dd) puis de retourner dans le monde insertion.
+
+------------------------------------------------------------------------------- 
+Reglages et commandes
+
+:set showmode        afficher le mode  
+:set number          numero de ligne 
+:source ~/.exrc      pour recharger le fichier de configuration .exrc
+:set scrolloff=1000  avoir constamment la ligne courante au centre de l'écran
+:nohlsearch          desactive la coloration jusqu'a la prochaine recherche
+
+-------------------------------------------------------------------------------
+Exploration de fichier
+
+:Explore   explorateur de fichier a partir du repertoire courant
+  d        creer un repertoire dans l'exporateur de fichier
+:Sexplore  idem :Explore mais dans une fenetre horizontal
+:edit .    explorer les fichiers a partir du home directory 
+
+------------------------------------------------------------------------------- 
+Fenetrage
+
+    +--------+--------+                         
+    |      :vsp       |  ctrl-w ctrl-w  changer de fenetre      
+    |        |        |  :q             fermer une fenetre
+    +- :sp --+        +  
+    |        |        |     
+    |        |        |  
+    +--------+--------+
+
+.  ouvre l'explorateur de fichier a la racine
+o  ouvre le fichier dans la meme fenetre que l'explorateur
+t  ouvre le fichier dans un nouvel onglet
+
+ctrl-w-+  redimensionne horizontalement, augmente
+ctrl-w--  redimensionne horizontalement, diminue
+ctrl-w-<  redimensionne verticalement, augmente
+ctrl-w->  redimensionne verticalement, diminue
+ctrl-w-=  redimensionne horizontalement, toutes a la meme taille
+ctrl-w-n  comme :sp
+
+------------------------------------------------------------------------------- 
+Presse papier
+
+Le presse papier correspond a registre special nomme +
+
+"+y  pour copier dans le presse papier
+"+p  pour coller le contenu du presse papier
+
+
+gg"+G  copie tout le fichier (de la premier a la derniere ligne du fichier)
+
+Note: clic du milieu apres avoir selectionne le texte a copier
+
+------------------------------------------------------------------------------- 
+Indentation
+
+>> pour indenter (avec le niveau d'indentation par defaut)
+
+set shiftwidth=1  pour regler le niveau d'indentation a 1
+ 
+vnoremap < <gv  pour rester en visual mode et ainsi pouvoir indenter plusieur
+vnoremap > >gv  fois d'affile                                                 
+         
+
+1. ma         pour poser une premiere marque, 
+2. mb         pour en poser une seconde, 
+3. :'a, 'b >  pour indenter de deux colonne la zone
+
+
+===============================================================================
+Notes
+
+" 
+
+"indique a vi qu'on souhaite utiliser le buffer qui suit ". "a se lit donc
+"utiliser le buffer a pour...". Par exemple
+- "add si lit "utiliser le buffer a pour y mettre la ligne courante"
+
++
+ 
++ est le registre qui correspond a presse papier. "+ se lit donc "utiliser le
+presse papier..."
+
+Buffer
+Un buffer est un fichier ouvert dans vi (meme si il n'est pas affiche)
+
+WORD
+
+Un WORD est une sequence de caractere quelconque (non blanc)
+
+    abc .,;({;,.123def:!?_)}  _   .  ghi    
+  --W---W---------------------W---W--W--
+
+Word
+
+Un word est une sequence 
+- soit une sequence de caracteres alphabetique et numerique, 
+- soit une sequence de ponctuation et de delimiteur,
+- soit une sequence d'underscore 
+
+    abc .,;({;,.123def:!?_)}  _   .  ghi    
+  --w---w-------w-----w--ww---w---w--w--
+
+
+------------------------------------------------------------------------------- 
+Mnemo
+
+a append
+b begin (souvent vers l'arriere)
+e end (souvent vers l'avant)
+f foward
+i insert
+o open
+
+------------------------------------------------------------------------------- 
+vi, l'editeur qui fait reflechir a ce qu'on fait.
+
+vi, l'editeur qui oblige a reflechir avant d'agir.
+
+vi, l'editeur qui fait realiser que l'edition de texte est une tache intellect
+
+vi, l'editeur qui fait realiser que l'edition de texte peut se faire
+intelligement pourvu qu'on reflechisse a ce qu'on doit faire.
