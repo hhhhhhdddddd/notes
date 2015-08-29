@@ -1,4 +1,6 @@
-# Polymorphisme
+# Polymorphisme d'inclusion (propre aux langages objets)
+
+NB. Pas de polymorphisme d'inclusion sans hierarchie de classes.
 
 Une classe mère (CM) a une méthode m. Une classe fille (CF) défini une méthode de même signature. On dit que que CF.m spécialise (redéfini) CM.m (CF l'adapte a ses besoins spécifiques). 
 La liaison entre l'identificateur et le code se fait à l'exécution (c'est la liaison dynamique). La recherche du code se fait à partir de l'objet effectivement référencé en mémoire lors de l'exécution. C'est le code de l'objet qui se trouve en mémoire à cet instant qui est utilisé et non le code du type déclaré. Autrement dit, c'est le code du type réel qui est utilisé et non le code du type déclaré.
@@ -16,10 +18,12 @@ Liaison dynamique
 
 
 
-# Surcharge
+# Surcharge (polymorphisme ad hoc, pas seulement les langages objets)
 
-La surcharge a lieu dans une classe (alors que le polymorphisme a lieu dans une arborescence de classes).
-Une méthode est redéfinie plusieurs fois d'une une classe (forcément avec des signature différente dans un language typé statiquement). Autrement dit, un identificateur de méthode est utilisé plusieurs fois.
+Le langage choisi le code d'un identificateur de fonction en fonction de la signature. 
+
+Dans les langages objets, la surcharge a lieu dans une classe (alors que le polymorphisme a lieu dans une arborescence de classes).
+Une méthode est redéfinie plusieurs fois d'une une classe (donc forcément avec des signatures différentes dans un language typé statiquement). Autrement dit, un identificateur de méthode est utilisé plusieurs fois.
 
 # Récapitulation surcharge vs polymorphisme
 
@@ -31,4 +35,6 @@ Héritage                 nul besoin         nécessite une arborescence de clas
 signature des méthodes   doivent différer   doivent être les mêmes
 résolu                   à la compilation   l'exécution
 
+# Liens
 cedric.cnam.fr/~farinone/Java2810/16.html
+fr.wikibooks.org/wiki/Programmation/Programmation_orient%C3%A9e_objet/Polymorphisme
