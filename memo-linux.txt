@@ -1,0 +1,10 @@
+# Recherche
+
+Recherche d'une chaine dans un fichier 
+  ls | grep "nom du fichier"
+
+Recherche du binaire, des sources et des pages de manuels d'une commande
+  whereis ce_que_je_cherche 
+
+Recherche d'une commande (chemin absolu)
+  which ce_que_je_cherche
