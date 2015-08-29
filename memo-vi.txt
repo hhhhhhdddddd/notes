@@ -3,7 +3,7 @@
 Si le curseur est un "block cursor", le "vertical cursor" est la partie gauche du "block cursor".
 En mode commande, une commande en majuscule signifie "avant le curseur" et minuscule signifie "après le curseur"
 
-# L'essentiel
+# L'essentiel (compatible avec le vi par défaut de cygwin)
 
 ## Supprimer (D dd x b-dw J) (delete, machine à écrire, beginning-delete word, join lines)
 
@@ -75,6 +75,14 @@ Coller après la ligne courante
   p 
 Coller avant la ligne courante
   P
+
+## Remplacement
+
+Remplacer une chaine de caractères dans toutes les lignes (%) en demandant (c)
+  :%s/a_remplacer/remplacement/c (: + numéro de ligne + s, pas de numéro de ligne signifie "ligne courante")
+Remplacer le caractère avant le curseur 
+  r
+  le caractère de remplacement
 
 # Déplacement et insertion dans une ligne
 
