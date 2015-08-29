@@ -43,12 +43,16 @@ Quitter (q pour quit)
 Annuler la dernière action (u pour undo)
   :u
 
-## Se déplacer (O $)
+## Se déplacer (O $ Ctrl-b Ctrl-f)
 
 Aller en début de ligne
   0
 Aller en fin de ligne
   $
+Aller à l'écran précédent
+  Ctrl-b
+Aller à l'écran suivant
+  Ctrl-f
 
 ## Afficher des informations utiles (showmode number nonumber :f)
 
