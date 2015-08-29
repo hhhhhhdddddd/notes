@@ -1,4 +1,5 @@
-Polymorphisme
+# Polymorphisme
+
 Une classe mère (CM) a une méthode m. Une classe fille (CF) défini une méthode de même signature. On dit que que CF.m spécialise (redéfini) CM.m (CF l'adapte a ses besoins spécifiques). 
 La liaison entre l'identificateur et le code se fait à l'exécution (c'est la liaison dynamique). La recherche du code se fait à partir de l'objet effectivement référencé en mémoire lors de l'exécution. C'est le code de l'objet qui se trouve en mémoire à cet instant qui est utilisé et non le code du type déclaré. Autrement dit, c'est le code du type réel qui est utilisé et non le code du type déclaré.
 CM cm = new CM();
@@ -13,6 +14,14 @@ Redéfinition
 Type déclaré vs type réel
 Liaison dynamique 
 
+
+
+# Surcharge
+
+La surcharge a lieu dans une classe (alors que le polymorphisme a lieu dans une arborescence de classes).
+Une méthode est redéfinie plusieurs fois d'une une classe (forcément avec des signature différente dans un language typé statiquement). Autrement dit, un identificateur de méthode est utilisé plusieurs fois.
+
+# Récapitulation surcharge vs polymorphisme
 
 Ne pas confondre liaison dynamique (polymorphisme d'inclusion) et surcharge.
 
