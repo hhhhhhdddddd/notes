@@ -1,0 +1,25 @@
+Polymorphisme
+Une classe mère (CM) a une méthode m. Une classe fille (CF) défini une méthode de même signature. On dit que que CF.m spécialise (redéfini) CM.m (CF l'adapte a ses besoins spécifiques). 
+La liaison entre l'identificateur et le code se fait à l'exécution (c'est la liaison dynamique). La recherche du code se fait à partir de l'objet effectivement référencé en mémoire lors de l'exécution. C'est le code de l'objet qui se trouve en mémoire à cet instant qui est utilisé et non le code du type déclaré. Autrement dit, c'est le code du type réel qui est utilisé et non le code du type déclaré.
+CM cm = new CM();
+CF cf = new CF();
+cm.m() // code de la classe mère
+cf.m() // code de la classe fille
+Avantages, on utilise dans le code une seule référence (sur le type racine) pour référencer tous les "sous-types" (et ce, sans que le compilateur ne se plaigne dans les langage type statiquement). Autrement dit, on peut référencer dans le code des objets sans connaître leur classe exacte, c'est le runtime qui s'occupe d'appeler le bon code (c'est la liaison dynamique). On peut donc, dans le code, instancié les objets qui vont bien en fonction de choix qu'on demandera à l'utilisateur de faire. Par exemple, si machin instancier truc sinon instancier bidule. Il suffit pour cela de déclarer une de type racine (ce sera le type déclaré), on pourra ensuite appelé toute les méthodes du type racine mais c'est le code du type réel qui sera utilisé. 
+
+NB. Le mécanisem de recherche de méthode est indétermiste et peut être long. C++ propose un mécanisme déterministe.
+
+Redéfinition
+Type déclaré vs type réel
+Liaison dynamique 
+
+
+Ne pas confondre liaison dynamique (polymorphisme d'inclusion) et surcharge.
+
+                         Surcharge          Polymorphisme
+                         ---------          -------------
+Héritage                 nul besoin         nécessite une arborescence de classes
+signature des méthodes   doivent différer   doivent être les mêmes
+résolu                   à la compilation   l'exécution
+
+cedric.cnam.fr/~farinone/Java2810/16.html
