@@ -1,15 +1,91 @@
-Le "vrai" curseur est la partie droite du rectangle.
+# Principes
+
+Si le curseur est un "block cursor", le "vertical cursor" est la partie gauche du "block cursor".
+En mode commande, une commande en majuscule signifie "avant le curseur" et minuscule signifie "après le curseur"
+
+# L'essentiel
+
+- Supprimer (D dd x b-dw j) (delete, xxx, beginning-delete word, join lines)
+
+Supprimer le reste de la ligne
+  D
+Supprimer la ligne
+  dd
+Supprimer le caractère à droite du curseur
+  x
+Supprimer un mot
+  b pour aller au début du mot
+  dw pour supprimer la chaine de caractère à droite du curser 
+Fusionner deux lignes (supprimer le caractère "fin de ligne" de la ligne courante)
+  J
+
+- Insérer (O o i a I A) (open line, insert, append)
+
+Insérer après la ligne courante (o pour open line)
+  o
+Insérer avant la ligne courante
+  O
+Insérer en début de ligne (i pour insert)
+  I
+Insérer en fin de ligne (a pour append)
+  A
+Insérer après un caractère (NB. Déplace le curseur à droite et passe ne mode insertion)
+  a
+Insérer avant un caractère (NB. Passe ne mode insertion sans déplacer le curseur)
+  i
+
+- Sauvegarder/quitter/annuler (:w :q :u) (write quit undo)
+
+Sauvegarder (w pour write)
+  :w
+Quitter (q pour quit)
+  :q (ajouter un ! pour quitter sans sauvegarder)
+Annuler la dernière action (u pour undo)
+  :u
+
+- Se déplacer (O $)
+
+Aller en début de ligne
+  0
+Aller en fin de ligne
+  $
+
+- Afficher des informations utiles (showmode number nonumber :f)
+
+Afficher le mode
+  :set showmode (NB. n'affiche que l'insertion --INSERT--)
+Afficher les numéros de ligne
+  :set number (nonumber pour les supprimer)
+Afficher le nom du fichier en cours d'édition
+  :f
+  ou
+  Ctrl-g (avec un 1 devant pour le chemin absolu)
+
+- Copier/Couper/Coller (yy-p dd-p p P) 
+
+Copier/coller une ligne
+  yy pour copier
+  p  pour coller
+Couper/coller une ligne
+  dd pour couper
+  y  pour coller
+Copier une ligne
+  yy
+Coller après la ligne courante
+  p 
+Coller avant la ligne courante
+  P
 
 # Déplacement et insertion dans une ligne
 
-Se deplacer dans la ligne: 0 (ou ^)  $ (ou g_)
-Insertion dans la ligne:   I i a  A
+Se deplacer dans la ligne:                0 (ou ^)  $ (ou g_)
+Passer en mode insertion dans la ligne:   I i a  A
 
 NB
-- I : deplace le curseur en debut de ligne et insère, autrement dit : insere devant le premier caractere alphanum
-- i : a gauche du curseur
-- a : deplace le curseur d'un caractere a droite et insere, autrement dit : a droite du curseur
-- A : deplace le a droite du dernier caractere
+I. Déplace le curseur en debut de ligne et insère, autrement dit : insere devant le premier caractere alphanum.
+i. A gauche du curseur
+a. Déplace le curseur d'un caractere a droite et insere, autrement dit : a droite du curseur
+A. Déplace le a droite du dernier caractere
 
 # Sélectionner, copier, coller, sauvegarder
 
@@ -18,14 +94,14 @@ Selectionner des lignes: shift+v
 Formatter sur 80 colonnes: gq
 Copier: y
 Copier dans le presse papier: "+y
-Couper: x
+Couper: x (coupe le caractère à droite du curseur)
 Coller: p
 Coller le presse papier: "+p
 Sauvegarder: :w
 
 NB
-- "<buf><cmd> : le buffer <buf> sera l'argument de la commande <cmd> 
-- + est un buffer, c'est le presse papier
+"<buf><cmd>. Passe le buffer <buf> en argument à la commande <cmd>.
++. + est un buffer, c'est le presse papier
 
 # Déplacements
 
@@ -35,14 +111,14 @@ Avancer le curseur: l w e  W  E ) } f<car>
 Reculer le curseur: h b ge gE B ( { t<car>
 
 NB: 
-- l : car
-- w : debut word
-- e : fin word
-- W : debut WORD
-- E : fin WORD
-- f<car> : jusqu'au car <car>
-- comme en C, les parentheses delimite une expression, donc : ligne
-- comme en C, les accolades delimitent des blocs, donc : paragraphe
+l. car
+w. debut word
+e. fin word
+W. debut WORD
+E. fin WORD
+f<car>. jusqu'au car <car>
+(, ). Comme en C, les parentheses delimite une expression, donc : ligne
+{, }. Comme en C, les accolades delimitent des blocs, donc : paragraphe
 
 Avancer la fenetre: j ^e ^d ^f G
 Reculer la fenetre: k ^y ^u ^b gg
@@ -368,33 +444,23 @@ vnoremap > >gv  fois d'affile
 3. :'a, 'b >  pour indenter de deux colonne la zone
 
 
-===============================================================================
-Notes
+# "Lexique"
 
-" 
-
-"indique a vi qu'on souhaite utiliser le buffer qui suit ". "x se lit donc
+". indique a vi qu'on souhaite utiliser le buffer qui suit ". "x se lit donc
 "utiliser le buffer x pour...". Par exemple
 - "xdd si lit "utiliser le buffer x pour y mettre la ligne courante"
 
-+
- 
-+ est le registre qui correspond au presse papier. "+ se lit donc "utiliser le
++. est le registre qui correspond au presse papier. "+ se lit donc "utiliser le
 presse papier..."
 
-Buffer
-Un buffer est un fichier ouvert dans vi (meme si il n'est pas affiche)
+Buffer. Un buffer est un fichier ouvert dans vi (meme si il n'est pas affiche)
 
-WORD
-
-Un WORD est une sequence de caractere quelconque (non blanc)
+WORD. Un WORD est une sequence de caractere quelconque (non blanc)
 
     abc .,;({;,.123def:!?_)}  _   .  ghi    
   --W---W---------------------W---W--W--
 
-Word
-
-Un word est une sequence 
+Word. Un word est une sequence 
 - soit une sequence de caracteres alphabetique et numerique, 
 - soit une sequence de ponctuation et de delimiteur,
 - soit une sequence d'underscore 
@@ -403,8 +469,7 @@ Un word est une sequence
   --w---w-------w-----w--ww---w---w--w--
 
 
-------------------------------------------------------------------------------- 
-Mnemo
+# Mnemo
 
 a append
 b begin (souvent vers l'arriere)
@@ -413,7 +478,8 @@ f foward
 i insert
 o open
 
-------------------------------------------------------------------------------- 
+# Slogans...
+
 vi, l'editeur qui fait reflechir a ce qu'on fait.
 
 vi, l'editeur qui oblige a reflechir avant d'agir.
@@ -422,3 +488,6 @@ vi, l'editeur qui fait realiser que l'edition de texte est une tache intellect
 
 vi, l'editeur qui fait realiser que l'edition de texte peut se faire
 intelligement pourvu qu'on reflechisse a ce qu'on doit faire.
+
+# Liens
+http://www.lagmonster.org/docs/vi.html
