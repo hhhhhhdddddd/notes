@@ -84,6 +84,13 @@ Coller après la ligne courante
 Coller avant la ligne courante
   P
 
+## Modifier la casse
+
+  Ctrl-v pour sélectionner du texte
+  U pour le mettre en majuscule
+  ou
+  u pour le mettre en minuscule
+
 ## Editer plusieurs fichiers
 
 Ouvrir un nouveau fichier
