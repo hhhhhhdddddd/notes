@@ -80,6 +80,12 @@ Coller après la ligne courante
 Coller avant la ligne courante
   P
 
+## Editer plusieurs fichiers
+
+Ouvrir un nouveau fichier
+  :e
+Passer au fichier suivant
+  :e#
 ## Remplacement
 
 Remplacer une chaine de caractères dans toutes les lignes (%) en demandant (c)
