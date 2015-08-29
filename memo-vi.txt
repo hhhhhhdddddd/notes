@@ -5,7 +5,7 @@ En mode commande, une commande en majuscule signifie "avant le curseur" et minus
 
 # L'essentiel
 
-- Supprimer (D dd x b-dw j) (delete, xxx, beginning-delete word, join lines)
+## Supprimer (D dd x b-dw J) (delete, machine à écrire, beginning-delete word, join lines)
 
 Supprimer le reste de la ligne
   D
@@ -19,7 +19,7 @@ Supprimer un mot
 Fusionner deux lignes (supprimer le caractère "fin de ligne" de la ligne courante)
   J
 
-- Insérer (O o i a I A) (open line, insert, append)
+## Insérer (O o i a I A) (open line, insert, append)
 
 Insérer après la ligne courante (o pour open line)
   o
@@ -34,7 +34,7 @@ Insérer après un caractère (NB. Déplace le curseur à droite et passe ne mod
 Insérer avant un caractère (NB. Passe ne mode insertion sans déplacer le curseur)
   i
 
-- Sauvegarder/quitter/annuler (:w :q :u) (write quit undo)
+## Sauvegarder/quitter/annuler (:w :q :u) (write quit undo)
 
 Sauvegarder (w pour write)
   :w
@@ -43,14 +43,14 @@ Quitter (q pour quit)
 Annuler la dernière action (u pour undo)
   :u
 
-- Se déplacer (O $)
+## Se déplacer (O $)
 
 Aller en début de ligne
   0
 Aller en fin de ligne
   $
 
-- Afficher des informations utiles (showmode number nonumber :f)
+## Afficher des informations utiles (showmode number nonumber :f)
 
 Afficher le mode
   :set showmode (NB. n'affiche que l'insertion --INSERT--)
@@ -61,7 +61,7 @@ Afficher le nom du fichier en cours d'édition
   ou
   Ctrl-g (avec un 1 devant pour le chemin absolu)
 
-- Copier/Couper/Coller (yy-p dd-p p P) 
+## Copier/Couper/Coller (yy-p dd-p p P) 
 
 Copier/coller une ligne
   yy pour copier
