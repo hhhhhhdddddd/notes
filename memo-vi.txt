@@ -68,11 +68,15 @@ Afficher le nom du fichier en cours d'édition
 ## Copier/Couper/Coller (yy-p dd-p p P) 
 
 Copier/coller une ligne
-  yy pour copier
-  p  pour coller
+  yy pour copier une ligne
+  p  pour coller après la ligne où se trouve le curseur
 Couper/coller une ligne
   dd pour couper
   y  pour coller
+Couper/coller plusieurs ligne
+  Shift-v pour sélectionner des lignes
+  x       pour couper la sélection
+  p       pour coller après la ligne où se trouve le curseur
 Copier une ligne
   yy
 Coller après la ligne courante
@@ -86,6 +90,7 @@ Ouvrir un nouveau fichier
   :e
 Passer au fichier suivant
   :e#
+
 ## Remplacement
 
 Remplacer une chaine de caractères dans toutes les lignes (%) en demandant (c)
